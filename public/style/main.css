@@ -1,4 +1,51 @@
-body .container {
-  background-color: #0097A7; }
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  max-height: 100em;
+  width: 100%;
+  z-index: 1; }
+  body nav #navbar {
+    z-index: 10;
+    background-color: #0097A7; }
+  body .container {
+    z-index: 3;
+    position: absolute;
+    padding: 0; }
+    body .container .content {
+      position: static;
+      background-color: #B2EBF2;
+      height: 20em;
+      width: 100%;
+      margin: 5em 0;
+      float: left; }
+  body #bg {
+    z-index: -1;
+    position: static;
+    bottom: 0;
+    height: 80em;
+    max-height: 110em;
+    overflow-y: scroll;
+    pointer-events: none; }
+    body #bg .layer1 {
+      position: relative;
+      overflow: hidden;
+      top: -60%;
+      height: 1000em;
+      max-height: 110em;
+      background-image: url("../img/stormy-sea.png");
+      background-size: auto; }
+    body #bg .layer2 {
+      position: relative;
+      overflow: hidden;
+      top: -60%;
+      height: 1000em;
+      max-height: 110em;
+      background-color: darkgrey;
+      background-size: auto;
+      float: left; }
+  body ::-webkit-scrollbar {
+    width: 0;
+    background: transparent; }
 
 /*# sourceMappingURL=main.css.map */

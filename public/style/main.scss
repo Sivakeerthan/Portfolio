@@ -1,6 +1,66 @@
 $dark-primary-color: #0097A7;
+$light-primary-color: #B2EBF2;
 body{
-  .container{
+  margin:0;
+  padding:0;
+  height: 100%;
+  max-height:100em;
+  width:100%;
+  z-index: 1;
+  nav{
+  #navbar{
+    z-index:10;
     background-color: $dark-primary-color;
+    }
+  }
+  .container{
+    z-index: 3;
+    position: absolute;
+    .content {
+      position: static;
+      background-color: $light-primary-color;
+      height: 20em;
+      width: 100%;
+      margin: 5em 0;
+      float:left;
+    }
+  padding: 0;
+  }
+  #bg {
+    z-index: -1;
+    position:static;
+    bottom:0;
+    height:80em;
+    max-height: 110em;
+    overflow-y: scroll;
+    pointer-events: none;
+
+
+    .layer1 {
+      position: relative;
+      overflow: hidden;
+      top:-60%;
+      height: 1000em;
+      max-height: 110em;
+      background-image: url("../img/stormy-sea.png");
+      background-size: auto;
+
+
+    }
+    .layer2 {
+      position: relative;
+      overflow: hidden;
+      top:-60%;
+      height: 1000em;
+      max-height: 110em;
+      background-color:darkgrey;
+      background-size: auto;
+      float:left;
+
+    }
+  }
+  ::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
   }
 }
