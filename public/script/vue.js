@@ -1,10 +1,10 @@
 
 //Navbar
-var pages= ["Home","About","Login"];
+var pages= ["Home","About","Files"];
     var navHtml = `<div class="nav-content">
                      <ul class="tabs tabs-transparent">`;
     for(var i=0;i<pages.length;i++){
-        navHtml += `<li class="tab"><a id="${pages[i].toLowerCase()}" href="#${pages[i]}">${pages[i]}</a></li>`;
+        navHtml += `<li class="tab nav-section"><a id="${pages[i].toLowerCase()}" href="#${pages[i]}">${pages[i]}</a></li>`;
     }
     navHtml+=`    </ul>
           </div>`;
