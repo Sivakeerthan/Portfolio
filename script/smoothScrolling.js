@@ -1,6 +1,7 @@
 $('nav-section').click(function () {
     var section = $(this).attr('href');
-    $(document).animate({
+    $('html, body').animate({
         scrollTop: $(section).offset().top
-    },3000)
+    },30000)
 });
+

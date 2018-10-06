@@ -2,7 +2,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  max-height: 100em;
   width: 100%;
   z-index: 1; }
   body #start {
@@ -13,7 +12,7 @@ body {
     height: 100%;
     display: block;
     position: absolute;
-    background-color: #C5CAE9;
+    background-color: rgba(48, 63, 159, 0.5);
     overflow: hidden; }
     body #start .logodiv {
       position: absolute;
@@ -51,9 +50,7 @@ body {
           top: 100%;
           left: 50%;
           margin-left: -5px;
-          border-width: 5px;
-          border-style: solid;
-          border-color: #FFC107 transparent transparent transparent; }
+          border: 5px solid #FFC107; }
         body #start .logodiv .tooltiptext .visible {
           visibility: visible;
           opacity: 1; }
@@ -63,13 +60,13 @@ body {
     left: 0;
     display: block;
     width: 100%;
-    height: auto; }
+    height: 100%; }
     body #mainpage #navbar {
       z-index: 10;
       width: 100%; }
       body #mainpage #navbar nav {
         position: inherit;
-        background-color: #303F9F; }
+        background-color: #FFC107; }
     body #mainpage .navbar-relative {
       position: relative;
       top: 0; }
@@ -78,79 +75,98 @@ body {
       top: 0; }
     body #mainpage .container {
       z-index: 2;
-      width: auto;
-      height: auto;
-      position: absolute;
+      width: 100%;
+      height: 100%;
+      position: relative;
       padding: 0;
+      margin: 0px;
       display: block; }
-      body #mainpage .container #Home {
-        min-height: 20em;
-        height: auto; }
-      body #mainpage .container #About {
-        min-height: 20em;
-        height: auto; }
-      body #mainpage .container #Files {
-        min-height: 20em;
-        height: auto; }
-      body #mainpage .container .content {
-        position: relative;
-        left: 0;
-        background-color: #C5CAE9;
-        height: 20em;
+      body #mainpage .container section {
+        padding-top: 10%;
         width: 100%;
-        margin: 2.5em 0;
-        padding: 0;
-        float: left;
-        overflow: hidden;
-        display: flex; }
-        body #mainpage .container .content .thumb {
+        height: 100%;
+        display: block; }
+        body #mainpage .container section .content {
           position: relative;
-          right: 0;
-          height: 20em;
-          width: auto;
-          transition: 3s ease-out; }
-        body #mainpage .container .content .previewText {
-          display: inline-block;
-          posititon: relative;
-          max-width: 50%;
-          height: 100%;
-          align-content: left;
-          float: left;
-          margin-left: 10px; }
-      body #mainpage .container .visiblePreview {
-        position: relative;
-        left: 20%;
-        align-content: right; }
-        body #mainpage .container .visiblePreview .thumb {
-          transition: 3s ease-out;
-          position: absolute;
-          left: 0; }
+          left: 0;
+          background-color: #C5CAE9;
+          height: auto;
+          width: 100%;
+          margin: 2.5em 0;
+          padding: 0;
+          overflow: hidden;
+          display: flex; }
+          body #mainpage .container section .content .thumb {
+            height: 100%;
+            width: auto; }
+            body #mainpage .container section .content .thumb.material-icons {
+              font-size: 10em;
+              color: white;
+              margin: auto; }
+          body #mainpage .container section .content .previewText {
+            display: inline-block;
+            posititon: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto; }
+            body #mainpage .container section .content .previewText div {
+              width: 100%;
+              background-color: inherit; }
+            body #mainpage .container section .content .previewText.fullWidth {
+              margin: 0 auto;
+              display: block; }
+              body #mainpage .container section .content .previewText.fullWidth h1 {
+                float: none;
+                width: 100%;
+                height: 10px;
+                display: block;
+                margin: 0; }
+          body #mainpage .container section .content .About-Content {
+            position: relative;
+            display: block;
+            margin: 0;
+            width: 100%;
+            height: auto;
+            box-shadow: none;
+            background-color: #3F51B5; }
+            body #mainpage .container section .content .About-Content div {
+              background-color: #3F51B5;
+              color: white; }
+            body #mainpage .container section .content .About-Content .card-content {
+              position: relative;
+              float: left;
+              width: 100%; }
+              body #mainpage .container section .content .About-Content .card-content.faehigkeiten {
+                overflow: auto;
+                width: 100%; }
+                body #mainpage .container section .content .About-Content .card-content.faehigkeiten .card-content ul {
+                  float: left;
+                  width: 50%;
+                  margin-right: px; }
+                  body #mainpage .container section .content .About-Content .card-content.faehigkeiten .card-content ul .progressBar {
+                    width: 100%; }
     body #mainpage #bg {
       z-index: -1;
-      position: relative;
-      bottom: 0;
       height: auto;
-      max-height: 100em;
-      overflow-y: scroll;
-      pointer-events: none;
-      filter: blur(4px) brightness(100%); }
-      body #mainpage #bg .layer1 {
-        position: relative;
-        overflow: hidden;
-        top: -60%;
-        height: 100em;
-        max-height: 100%;
-        background-image: url("../img/stormy-sea.png");
-        background-size: auto; }
+      max-height: 1000px;
+      overflow-y: scroll; }
       body #mainpage #bg .layer2 {
-        position: relative;
-        overflow: hidden;
-        top: -60%;
-        height: 1000em;
-        max-height: 110em;
-        background-color: darkgrey;
-        background-size: auto;
-        float: left; }
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-image: url("http://genchi.info/img/singapore-wallpaper-1.jpg");
+        background-repeat: no-repeat;
+        filter: blur(4px) brightness(100%);
+        transform: scale(1.1); }
+        @media screen and (orientation: portrait) {
+          body #mainpage #bg .layer2 {
+            background-size: auto 100%; } }
+        @media screen and (orientation: landscape) {
+          body #mainpage #bg .layer2 {
+            background-size: 100% auto; } }
   body ::-webkit-scrollbar {
     width: 0;
     background: transparent; }

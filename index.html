@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css"/>
+    <link rel="stylesheet" href="script/StepProgressBar/jquery.stepProgressBar.css"/>
 
     <title>Title</title>
 </head>
@@ -34,34 +36,77 @@
     <div class="container">
         <section id="Home">
         <div class="content card-panel">
-            <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+            <i class="material-icons thumb">home</i>
             <div class="previewText">
-            <h1>Lorem Ipsum</h1>
-                <div class="collapsible-header"><p style="width:100%"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p></div>
-                <div class="collapsible-body"><p style="width:100%">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p></div>
-            </div>
-        </div>
-        <div class="content card-panel">
-            <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
-            <div class="previewText">
-            <h1>Lorem Ipsum</h1>
-            <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <h1>Home</h1>
+            <p>Herzlich Wilkommen zu meiner Website!</p>
+            <p>Ich heisse Sivakeerthan Vamanarajasekaran und absolviere momentan die IMS-Ausbildung an der Bwd-Bern.
+            <br> Durch dieser Website, werden Sie vieles über mich erfahren und somit auch mich besser kennenlernen.</p>
             </div>
         </div>
         </section>
         <section id="About">
         <div class="content card-panel">
             <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
-            <div class="previewText">
-            <h1>Lorem Ipsum</h1>
-            <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <div class="previewText fullWidth">
+            <h1>About</h1>
             </div>
-        </div>
-        <div class="content card-panel">
-            <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
-            <div class="previewText">
-            <h1>Lorem Ipsum</h1>
-            <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <div class="card About-Content">
+            <div class="card-content hobbies">
+                <h2>Hobbies</h2>
+                <ul>
+                    <li>Serien schauen</li>
+                    <li>Programmieren</li>
+                    <li>Fussball</li>
+                    <li>Basketball</li>
+                    <li>Gamen</li>
+                </ul>
+            </div>
+            <div class="card-content faehigkeiten">
+                <h2>Fähigkeiten</h2>
+                <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                        <li class="tab"><a class="active" href="#Frontend-Content">Frontend</a></li>
+                        <li class="tab"><a href="#Backend-Content">Backend</a></li>
+                        <li class="tab"><a href="#Shell-Content">Shell</a></li>
+                        <li class="tab"><a href="#Script-Content">Script</a></li>
+                    </ul>
+                </div>
+                <div class="card-content" id="Frontend-Content">
+                    <ul>
+                        <li><span>HTML</span>
+                            <div class="progressBar sg"></div>
+                        </li>
+                        <li><span>CSS</span>
+                            <div class="progressBar sg"></div>
+                        </li>
+                        <li><span>JavaScript</span>
+                            <div class="progressBar sg"></div>
+                        </li>
+
+                    </ul>
+                    <ul>
+                        <li><span>SCSS</span>
+                            <div class="progressBar g"></div>
+                        </li>
+                        <li><span>JQuery</span>
+                            <div class="progressBar g"></div>
+                        </li>
+                        <li><span>Vue.JS</span>
+                            <div class="progressBar n"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-content" id="Backend-Content">
+
+                </div>
+                <div class="card-content" id="Shell-Content">
+
+                </div>
+                <div class="card-content" id="Script-Content">
+
+            </div>
+            </div>
             </div>
         </div>
         </section>
@@ -103,8 +148,8 @@
 
 <script src="script/main.js" type="text/javascript"></script>
 <script src="script/smoothScrolling.js" type="text/javascript"></script>
-<script src="script/reverseScroll.js" type="text/javascript"></script>
 <script src="https://github.com/inuyaksa/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+<script src="script/StepProgressBar/jquery.stepProgressBar.js"></script>
 <!--<script type="text/javascript" src="script/vue.js"></script>-->
 </body>
 </html>

@@ -7,7 +7,6 @@ body{
   margin:0;
   padding:0;
   height: 100%;
-  max-height:100em;
   width:100%;
   z-index: 1;
   #start{
@@ -18,7 +17,7 @@ body{
     height:100%;
     display: block;
     position: absolute;
-    background-color: $light-primary-color;
+    background-color: rgba($dark-primary-color,0.5);
     overflow:hidden;
 
     .logodiv{ //w3schools tooltip: https://www.w3schools.com/howto/howto_css_tooltip.asp
@@ -62,9 +61,7 @@ body{
           top: 100%;
           left: 50%;
           margin-left: -5px;
-          border-width: 5px;
-          border-style: solid;
-          border-color: $accent-color transparent transparent transparent;
+          border: 5px solid $accent-color;
         }
         .visible{
             visibility: visible;
@@ -79,13 +76,13 @@ body{
     left:0;
     display:block;
     width:100%;
-    height:auto;
+    height:100%;
   #navbar {
     z-index: 10;
     width:100%;
     nav {
       position:inherit;
-      background-color: $dark-primary-color;
+      background-color: $accent-color;
     }
   }
     .navbar-relative{
@@ -98,99 +95,116 @@ body{
     }
   .container{
     z-index: 2;
-    width: auto;
-    height: auto;
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: relative;
     padding: 0;
+    margin:0px;
     display:block;
-    #Home{
-      min-height:20em;
-      height:auto;
-    }
-    #About{
-      min-height:20em;
-      height:auto;
-    }
-    #Files{
-      min-height:20em;
-      height:auto;
-    }
-    .content {
-      position: relative;
-      left: 0;
-      background-color: $light-primary-color;
-      height: 20em;
-      width:100%;
-      margin: 2.5em 0;
-      padding:0;
-      float:left;
-      overflow: hidden;
-      display: flex;
-
-
-      .thumb{
+    section {
+      padding-top:10%;
+      width: 100%;
+      height: 100%;
+      display: block;
+      .content {
         position: relative;
-        right:0;
-        height: 20em;
-        width: auto;
-        transition: 3s ease-out;
-      }
-      .previewText{
-        display:inline-block;
-        posititon:relative;
-        max-width:50%;
-        height:100%;
-        align-content: left;
-        float:left;
-        margin-left:10px;
+        left: 0;
+        background-color: $light-primary-color;
+        height: auto;
+        width: 100%;
+        margin: 2.5em 0;
+        padding: 0;
+        overflow: hidden;
+        display: flex;
+        .thumb{
+          height: 100%;
+          width:auto;
+          &.material-icons{
+            font-size:10em;
+            color: white;
+            margin:auto;
+          }
+        }
+        .previewText {
+          display: inline-block;
+          posititon: relative;
+          width: 100%;
+          height: 100%;
+          margin:0 auto;
+          div {
+            width: 100%;
+            background-color: inherit;
+          }
+          &.fullWidth{
+            margin:0 auto;
+            display: block;
+            h1 {
+              float: none;
+              width: 100%;
+              height: 10px;
+              display: block;
+              margin:0;
+            }
+          }
+        }
+        .About-Content{
+          position: relative;
+          display:block;
+          margin:0;
+          width: 100%;
+          height: auto;
+          box-shadow: none;
+          background-color: $primary-color;
+          div{
+            background-color: $primary-color;
+            color: white;
+          }
+          .card-content{
+            position: relative;
+            float: left;
+            width:100%;
+            &.faehigkeiten{
+              overflow: auto;
+              width: 100%;
+              .card-content{
+                ul{
+                  float:left;
+                  width:50%;
+                  margin-right: 3px;
+                  .progressBar{
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
-    .visiblePreview{
-      //transition: 3s;
-      position: relative;
-      left:20%;
-      align-content: right;
-      .thumb{
-        transition: 3s ease-out;
-        position: absolute;
-        left:0;
-
-      }
-    }
-
   }
   #bg {
-    z-index: -1;
-    position:relative;
-    bottom:0;
+    z-index:-1;
     height:auto;
-    max-height: 100em;
+    max-height: 1000px;
     overflow-y: scroll;
-    pointer-events: none;
-    filter: blur(4px) brightness(100%);
 
-
-    .layer1 {
-      position: relative;
-      overflow: hidden;
-      top:-60%;
-      height: 100em;
-      max-height: 100%;
-      background-image: url("../img/stormy-sea.png");
-      background-size: auto;
-
-
-    }
     .layer2 {
-      position: relative;
-      overflow: hidden;
-      top:-60%;
-      height: 1000em;
-      max-height: 110em;
-      background-color:darkgrey;
-      background-size: auto;
-      float:left;
-
+      position: fixed;
+      top:0;
+      left:0;
+      display:block;
+      height: 100%;
+      width:100%;
+      background-image: url("http://genchi.info/img/singapore-wallpaper-1.jpg");
+      @media screen and (orientation:portrait) {
+        background-size: auto 100%;
+      }
+      @media screen and (orientation:landscape) {
+        background-size: 100% auto;
+      }
+      background-repeat: no-repeat;
+      filter: blur(4px) brightness(100%);
+      transform: scale(1.1);
     }
   }
   }
