@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <link rel="stylesheet" href="script/materialize/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css"/>
     <link rel="stylesheet" href="script/StepProgressBar/jquery.stepProgressBar.css"/>
@@ -27,7 +27,9 @@
                     <ul class="tabs tabs-transparent">
                        <li class="tab nav-section"><a id="home-nav" href="#Home">Home</a></li>
                        <li class="tab nav-section"><a id="about-nav" href="#About">About</a></li>
+                       <li class="tab nav-section"><a id="projects-nav" href="#Projects">Projects</a></li>
                        <li class="tab nav-section"><a id="files-nav" href="#Files">Files</a></li>
+                       <li class="tab nav-section"><a id="contact-nav" href="#Contact">Contact</a></li>
                        </ul>
                 </div>
             </div>
@@ -40,91 +42,280 @@
             <div class="previewText">
             <h1>Home</h1>
             <p>Herzlich Wilkommen zu meiner Website!</p>
-            <p>Ich heisse Sivakeerthan Vamanarajasekaran und absolviere momentan die IMS-Ausbildung an der Bwd-Bern.
+            <p>Ich heisse Sivakeerthan Vamanarajasekaran und absolviere momentan die IMS-Ausbildung an der BWD Bern.
             <br> Durch dieser Website, werden Sie vieles über mich erfahren und somit auch mich besser kennenlernen.</p>
+            <p>Die Hintergrundbilder sind frei verwendbare Bilder von der wundervollen Stadt in Singapur aus der Internet-Galerie namens "pexels.com".
+            <br>Falls Sie sich fragen, wieso ich nur Bilder von dieser schönen Stadt als Hintergrund genommen habe, werde ich es ihnen gerne erklären.
+                <br>Und zwar wollte ich schon immer in meinen letzten Lebensjahren, nach der vervollständigung meiner Berufskarriere, in Singapur leben.
+                <br>Deswegen habe ich mich entschieden, dies in meiner Website darzustellen.</p>
+            <p>Diese Website wurde mit Hilfe des front-end Framework namens "Materialize" gestaltet. Weitere Infos zum Framework finden Sie
+                <a target="_blank" href="https://materializecss.com">hier</a> </p>
             </div>
         </div>
         </section>
         <section id="About">
-        <div class="content card-panel">
+        <div class="content2 card-panel">
             <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+            <div class="wrapper">
             <div class="previewText fullWidth">
             <h1>About</h1>
             </div>
             <div class="card About-Content">
-            <div class="card-content hobbies">
+            <div class="left card-content div-slider carousel carousel-slider">
+             <div class="carousel-item perso" href=".#one!">
+                <h2>Personalien</h2>
+                <table>
+                    <tr>
+                        <th>Vorname:</th>
+                        <td>Sivakeerthan</td>
+                    </tr>
+                    <tr>
+                        <th>Nachname:</th>
+                        <td>Vamanarajasekaran</td>
+                    </tr>
+                    <tr>
+                        <th>Geburtsdatum:</th>
+                        <td>10.Februar 2000</td>
+                    </tr>
+                    <tr>
+                        <th>Nationalität:</th>
+                        <td>CH</td>
+                    </tr>
+                </table>
+            </div>
+             <div class="carousel-item hobbies" href=".#two!">
                 <h2>Hobbies</h2>
-                <ul>
-                    <li>Serien schauen</li>
-                    <li>Programmieren</li>
-                    <li>Fussball</li>
-                    <li>Basketball</li>
-                    <li>Gamen</li>
+                <ul class="collection">
+                    <li class="collection-item">Serien schauen</li>
+                    <li class="collection-item">Programmieren</li>
+                    <li class="collection-item">Fussball</li>
+                    <li class="collection-item">Basketball</li>
+                    <li class="collection-item">Gamen</li>
                 </ul>
+            </div>
+             <div class="carousel-item besch" href=".#three!">
+                    <h2>Weitere Beschäftigungen</h2>
+                    <ul class="collection">
+                        <li class="collection-item">Vater im Restaurant helfen</li>
+                        <li class="collection-item">Freunde und Verwandte bei technischen Schwierigkeiten unterstützen</li>
+                        <li class="collection-item">Mutter im Haushalt unterstützen</li>
+                    </ul>
+                </div>
             </div>
             <div class="card-content faehigkeiten">
                 <h2>Fähigkeiten</h2>
-                <div class="card-tabs">
-                    <ul class="tabs tabs-fixed-width">
-                        <li class="tab"><a class="active" href="#Frontend-Content">Frontend</a></li>
-                        <li class="tab"><a href="#Backend-Content">Backend</a></li>
-                        <li class="tab"><a href="#Shell-Content">Shell</a></li>
-                        <li class="tab"><a href="#Script-Content">Script</a></li>
-                    </ul>
-                </div>
-                <div class="card-content" id="Frontend-Content">
+                <div class="card faehigkeiten-subcard">
+                    <div class="card-tabs">
+                        <ul class="tabs tabs-fixed-width">
+                            <li class="tab"><a class="active" href="#frontend">Frontend</a></li>
+                            <li class="tab"><a href="#backend">Backend</a></li>
+                            <li class="tab"><a href="#shell">Shell-Script</a></li>
+                        </ul>
+                    </div>
+                    <div class="card-content">
+                        <div id="frontend">
                     <ul>
                         <li><span>HTML</span>
-                            <div class="progressBar sg"></div>
+                            <div class="progress">
+                                <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
+                            </div>
                         </li>
                         <li><span>CSS</span>
-                            <div class="progressBar sg"></div>
+                            <div class="progress">
+                                <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
+                            </div>
                         </li>
                         <li><span>JavaScript</span>
-                            <div class="progressBar sg"></div>
+                            <div class="progress">
+                                <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
+                            </div>
                         </li>
 
                     </ul>
                     <ul>
                         <li><span>SCSS</span>
-                            <div class="progressBar g"></div>
+                            <div class="progress">
+                                <div class="determinate" style="width: 60%" title="Gut"></div>
+                            </div>
                         </li>
                         <li><span>JQuery</span>
-                            <div class="progressBar g"></div>
+                            <div class="progress">
+                                <div class="determinate" style="width: 60%" title="Gut"></div>
+                            </div>
                         </li>
                         <li><span>Vue.JS</span>
-                            <div class="progressBar n"></div>
+                            <div class="progress">
+                                <div class="determinate" style="width: 10%" title="Neu"></div>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <div class="card-content" id="Backend-Content">
+                        <div id="backend">
+                            <ul>
+                                <li><span>JAVA</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
+                                    </div>
+                                </li>
+                                <li><span>C#</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
+                                    </div>
+                                </li>
+                                <li><span>PHP</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
+                                    </div>
+                                </li>
 
+                            </ul>
                 </div>
-                <div class="card-content" id="Shell-Content">
-
+                        <div id="shell">
+                            <ul>
+                                <li><span>Bash</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 50%" title="Gut"></div>
+                                    </div>
+                                </li>
+                                <li><span>Python</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 50%" title="Gut"></div>
+                                    </div>
+                                </li>
+                            </ul>
                 </div>
-                <div class="card-content" id="Script-Content">
-
+                    </div>
+                </div>
             </div>
             </div>
             </div>
         </div>
         </section>
+        <section id="Projects">
+            <div class="content card-panel">
+                <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+
+                <div class="projectsContent">
+                    <div class="previewText">
+                        <h1>Projects</h1>
+                    </div>
+                    <div class="projectsGrid">
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/projects/DiscoverBern.svg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">DiscoverBern<i class="material-icons right">more_vert</i></span>
+                            <span>Klicken Sie für mehr Informationen!</span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">DiscoverBern<i class="material-icons right">close</i></span>
+                            <p>DiscoverBern ist eine auf das BBC-MVC (PHP MVC-Framework) basierende Plattform für Touristen,bei welcher sie ihre Erlebnisse in Bern, mit den Sehenswürdigkeiten und auch der Gastronomie Teilen. Ausserdem können Sie sich andere öffentliche Beiträge anschauen und bewerten.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/projects/BadiApp.png">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">BadiApp<i class="material-icons right">more_vert</i></span>
+                            <span>Klicken Sie für mehr Informationen!</span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">BadiApp<i class="material-icons right">close</i></span>
+                            <p>BadiApp ist eine Android-App welche den Benutzer die nächstgelegene Schwimmbäder zeigt und die wichtigsten Informationen ausgibt.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/projects/MRT.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">ModuleRepetitionTool-SJ<i class="material-icons right">more_vert</i></span>
+                            <span>Klicken Sie für mehr Informationen!</span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">ModuleRepetitionTool-SJ<i class="material-icons right">close</i></span>
+                            <p>ModuleRepetitionTool-SJ ist eine Plattform, um sein Wissen aus den Informatik-Modulen durch verschiedensten Testarten zu überprüfen und den Stoff zu Repetieren. Bisher dient es nur zur Repetition von PHP-Modulen, jedoch kann es auch für die anderen Modulen eingesetzt werden.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/projects/MRT.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Systema-CAI<i class="material-icons right">more_vert</i></span>
+                            <span>Klicken Sie für mehr Informationen!</span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Systema-CAI<i class="material-icons right">close</i></span>
+                            <p>Systema-CAI ist eine moderne Lösung für das Absenzenwesen in der BWD, welches eine einfache Verwaltung der Absenzen ermöglicht. Dafür müssen sich die Benutzer nur in diesem Portal anmelden und schon haben sie den jeweiligen Überblick. Der Überblick variiert je nach Position(Schüler,Sekretariat,Lehrer,Direktor) des Benutzers.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="img/projects/MRT.jpg">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4">Restaurant Lachen Control Panel<i class="material-icons right">more_vert</i></span>
+                            <span>Klicken Sie für mehr Informationen!</span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4">Restaurant Lachen Control Panel<i class="material-icons right">close</i></span>
+                            <p>Dies ist eine Benutzeroberfläche für die Verwaltung der Webseite, von unserem Restaurant. Sie basiert auch auf dem BBC-MVC Framework und arbeitet mit einer MySQL-Datenbank im Hintergrund. Sie ermöglicht den Benutzern, auch ohne HTML-kenntnisse die Menus auf der Webseite einzutragen.</p>
+                        </div>
+                        <div class="card-action">
+                            <a target="_blank" href="http://cp.restaurant-lachen.ch">Anschauen</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="Files">
-        <div class="content card-panel">
+        <div class="content2 card-panel">
             <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+            <div class="wrapper">
             <div class="previewText">
-            <h1>Lorem Ipsum</h1>
-            <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <h1>Files</h1>
+            <p style="width:100%;"><br>Hier besteht ihnen die Möglichkeit,mit Hilfe des Ihnen in den Bewerbungsunterlagen mitgegebenen Zugriffscodes, einen Blick in meinen persönlichen Dokumenten zu werfen.</p>
+            </div>
+            <div class="Files-Content">
+                <div class="secure-form">
+                <form method="post" onsubmit="event.preventDefault();validatePW()">
+                    <div class="row">
+                        <div class="input-field col s6 l6 m6">
+                            <i class="material-icons prefix">lock</i>
+                            <input id="pw-input" name="pw-input" type="password" class="validate">
+                            <label for="pw-input">Zugriffscode</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Öffnen
+                        <i class="material-icons right">send</i>
+                    </button>
+                </form>
+                </div>
+                <div class="hidden-files">
+                </div>
+            </div>
             </div>
         </div>
-        <div class="content card-panel">
-            <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
-            <div class="previewText">
-            <h1>Lorem Ipsum</h1>
-            <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </section>
+        <section id="Contact">
+            <div class="content card-panel">
+                <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+                <div class="previewText">
+                    <h1>Lorem Ipsum</h1>
+                    <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
             </div>
-        </div>
+            <div class="content card-panel">
+                <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+                <div class="previewText">
+                    <h1>Lorem Ipsum</h1>
+                    <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
         </section>
 
     </div>
@@ -138,18 +329,17 @@
 </div>
 
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
 <!-- Compiled and minified JavaScript -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<script src="script/materialize/js/materialize.min.js"></script>
 <!--<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>-->
 
+<!--<script src="script/smoothScrolling.js" type="text/javascript"></script>-->
+<script src="script/StepProgressBar/jquery.stepProgressBar.js" type="text/javascript"></script>
+<script src="script/viewport/jquery.visible.min.js" type="text/javascript"></script>
 <script src="script/main.js" type="text/javascript"></script>
-<script src="script/smoothScrolling.js" type="text/javascript"></script>
-<script src="https://github.com/inuyaksa/jquery.nicescroll/jquery.nicescroll.min.js"></script>
-<script src="script/StepProgressBar/jquery.stepProgressBar.js"></script>
+
 <!--<script type="text/javascript" src="script/vue.js"></script>-->
 </body>
 </html>

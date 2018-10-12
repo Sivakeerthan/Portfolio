@@ -66,7 +66,8 @@ body {
       width: 100%; }
       body #mainpage #navbar nav {
         position: inherit;
-        background-color: #FFC107; }
+        background-color: #FFC107;
+        height: auto; }
     body #mainpage .navbar-relative {
       position: relative;
       top: 0; }
@@ -91,82 +92,216 @@ body {
           left: 0;
           background-color: #C5CAE9;
           height: auto;
-          width: 100%;
+          max-height: 80%;
+          width: 100vw;
           margin: 2.5em 0;
           padding: 0;
           overflow: hidden;
           display: flex; }
           body #mainpage .container section .content .thumb {
             height: 100%;
-            width: auto; }
+            width: auto;
+            float: left; }
             body #mainpage .container section .content .thumb.material-icons {
               font-size: 10em;
               color: white;
-              margin: auto; }
+              margin: auto 0; }
+            @media only screen and (max-width: 929px) {
+              body #mainpage .container section .content .thumb {
+                display: none !important; } }
           body #mainpage .container section .content .previewText {
             display: inline-block;
             posititon: relative;
             width: 100%;
             height: 100%;
-            margin: 0 auto; }
-            body #mainpage .container section .content .previewText div {
-              width: 100%;
-              background-color: inherit; }
-            body #mainpage .container section .content .previewText.fullWidth {
-              margin: 0 auto;
-              display: block; }
-              body #mainpage .container section .content .previewText.fullWidth h1 {
-                float: none;
-                width: 100%;
-                height: 10px;
-                display: block;
-                margin: 0; }
-          body #mainpage .container section .content .About-Content {
-            position: relative;
-            display: block;
+            margin: 0 auto;
+            padding: 5px; }
+          body #mainpage .container section .content .projectsContent {
+            height: auto;
+            max-height: 80% !important;
+            overflow: scroll;
             margin: 0;
             width: 100%;
+            padding: 0; }
+            body #mainpage .container section .content .projectsContent .previewText {
+              float: none;
+              width: auto;
+              height: 5em;
+              display: block;
+              margin: 0 auto; }
+              body #mainpage .container section .content .projectsContent .previewText h1 {
+                margin: 0;
+                padding: 0; }
+            body #mainpage .container section .content .projectsContent .projectsGrid {
+              overflow: scroll;
+              margin-top: 10px; }
+              body #mainpage .container section .content .projectsContent .projectsGrid .card {
+                max-width: 30% !important;
+                max-height: 80% !important;
+                float: left;
+                margin: 5px; }
+        body #mainpage .container section .content2 {
+          position: relative;
+          left: 0;
+          background-color: #3F51B5;
+          height: auto;
+          max-height: 100%;
+          width: 100vw;
+          margin: 2.5em 0;
+          padding: 0;
+          overflow: hidden;
+          display: flex; }
+          body #mainpage .container section .content2 .thumb {
+            height: 100%;
+            width: auto;
+            float: left; }
+            body #mainpage .container section .content2 .thumb.material-icons {
+              font-size: 10em;
+              color: white;
+              margin: auto 0; }
+            @media only screen and (max-width: 929px) {
+              body #mainpage .container section .content2 .thumb {
+                display: none !important; } }
+          body #mainpage .container section .content2 .previewText {
+            display: inline-block;
+            posititon: relative;
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 5px;
+            color: white; }
+          body #mainpage .container section .content2 .wrapper {
             height: auto;
-            box-shadow: none;
+            min-height: 100%;
+            margin: 0;
+            width: 100%;
+            padding: 0;
+            color: white;
             background-color: #3F51B5; }
-            body #mainpage .container section .content .About-Content div {
-              background-color: #3F51B5;
-              color: white; }
-            body #mainpage .container section .content .About-Content .card-content {
-              position: relative;
+            body #mainpage .container section .content2 .wrapper .previewText {
               float: left;
-              width: 100%; }
-              body #mainpage .container section .content .About-Content .card-content.faehigkeiten {
-                overflow: auto;
-                width: 100%; }
-                body #mainpage .container section .content .About-Content .card-content.faehigkeiten .card-content ul {
+              width: auto;
+              height: auto;
+              display: block;
+              margin: 0 auto;
+              color: white; }
+              body #mainpage .container section .content2 .wrapper .previewText h1 {
+                margin: 0;
+                padding: 0; }
+            body #mainpage .container section .content2 .wrapper div {
+              width: 100%;
+              background-color: inherit; }
+            body #mainpage .container section .content2 .wrapper .About-Content {
+              position: relative;
+              left: 0;
+              display: block;
+              margin: 0;
+              padding: 0;
+              width: 100%;
+              overflow: hidden;
+              height: 80%;
+              box-shadow: none;
+              background-color: #3F51B5; }
+              body #mainpage .container section .content2 .wrapper .About-Content div {
+                background-color: inherit;
+                color: white; }
+              body #mainpage .container section .content2 .wrapper .About-Content .card-content {
+                position: relative;
+                height: 100%; }
+                body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider {
+                  width: auto;
+                  max-width: 40% !important;
+                  min-width: 40% !important;
+                  margin: 0;
+                  min-height: 100% !important; }
+                  body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item {
+                    padding: 5px;
+                    padding-bottom: 10px;
+                    height: 70%;
+                    overflow-y: scroll; }
+                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item h2 {
+                      font-size: 2em; }
+                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item ul {
+                      border: none;
+                      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
+                      body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item ul li {
+                        background-color: inherit;
+                        border-color: rgba(0, 0, 0, 0.12); }
+                body #mainpage .container section .content2 .wrapper .About-Content .card-content .card-tabs .tabs {
+                  background-color: #FFC107; }
+                  body #mainpage .container section .content2 .wrapper .About-Content .card-content .card-tabs .tabs a {
+                    color: white; }
+                body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten {
+                  position: relative;
+                  top: 0;
+                  right: 0;
+                  overflow: hidden;
+                  width: auto;
+                  max-width: 60% !important;
+                  min-height: 80% !important;
+                  margin: 0; }
+                  body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard {
+                    width: 100%;
+                    height: 100% !important;
+                    margin: 0;
+                    box-shadow: none;
+                    display: block; }
+                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content {
+                      background-color: #303F9F; }
+                      body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul {
+                        float: left;
+                        width: 45%;
+                        margin-right: 5px; }
+                        body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul .progressBar {
+                          width: 100%; }
+                        body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul .progress {
+                          background-color: grey; }
+                          body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul .progress .determinate {
+                            background-color: white; }
+            body #mainpage .container section .content2 .wrapper .Files-Content {
+              height: auto;
+              width: auto;
+              color: white;
+              display: block; }
+              body #mainpage .container section .content2 .wrapper .Files-Content .secure-form {
+                display: block; }
+                body #mainpage .container section .content2 .wrapper .Files-Content .secure-form #pw-input {
                   float: left;
-                  width: 50%;
-                  margin-right: px; }
-                  body #mainpage .container section .content .About-Content .card-content.faehigkeiten .card-content ul .progressBar {
-                    width: 100%; }
-    body #mainpage #bg {
-      z-index: -1;
-      height: auto;
-      max-height: 1000px;
-      overflow-y: scroll; }
-      body #mainpage #bg .layer2 {
-        position: fixed;
-        top: 0;
-        left: 0;
-        display: block;
-        height: 100%;
-        width: 100%;
-        background-image: url("http://genchi.info/img/singapore-wallpaper-1.jpg");
-        background-repeat: no-repeat;
-        filter: blur(4px) brightness(100%);
-        transform: scale(1.1); }
-        @media screen and (orientation: portrait) {
-          body #mainpage #bg .layer2 {
-            background-size: auto 100%; } }
-        @media screen and (orientation: landscape) {
-          body #mainpage #bg .layer2 {
-            background-size: 100% auto; } }
+                  width: 50% !important; }
+              body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files {
+                display: none; }
+                body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid {
+                  display: block;
+                  height: auto;
+                  max-height: 50% !important; }
+                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row {
+                    overflow-x: scroll; }
+                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
+                      max-height: 50%;
+                      float: left !important;
+                      max-width: 30% !important; }
+  body #bg {
+    z-index: -1;
+    height: auto;
+    max-height: 1000px;
+    overflow-y: scroll; }
+    body #bg .layer2 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background-image: url("../img/bg1.jpg");
+      background-repeat: no-repeat;
+      filter: blur(4px) brightness(100%);
+      transform: scale(1.1); }
+      @media screen and (orientation: portrait) {
+        body #bg .layer2 {
+          background-size: auto 100%; } }
+      @media screen and (orientation: landscape) {
+        body #bg .layer2 {
+          background-size: 100% auto; } }
   body ::-webkit-scrollbar {
     width: 0;
     background: transparent; }

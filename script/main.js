@@ -1,4 +1,4 @@
-
+//Fixed navbar
 $("#navbar").addClass('navbar-relative');
     $(window).scroll(function () {
         var top = $("#navbar").offset().top;
@@ -16,9 +16,12 @@ $("#navbar").addClass('navbar-relative');
 
 // Refresh
     $(document).ready(function () {
-        $('html, body').animate({
-            scrollTop: $("html,body").offset().top
-        },3000);
+        if(location.hash == "") {
+            $("#start").css("display","block");
+            $('html, body').animate({
+                scrollTop: $("html,body").offset().top
+            }, 3000);
+        }
 
         if($(window).height > $(window).width){
             $(".layer2").css("background-size","auto 100%");
@@ -54,8 +57,9 @@ var lastScrollTop=0;
         $('html, body').animate({
             scrollTop: $("#mainpage").offset().top
         },3000);
-
-
+        if($('html,body').scrollTop >= $("#mainpage").offset().top){
+            $("#start").css('display','none');
+        }
 
 
     });
@@ -63,77 +67,188 @@ var lastScrollTop=0;
 
 //Changing BG-Image
 $(document).ready(function () {
-    var home = $("#Home").offset().top;
+    var home = $("#Home").offset().bottom;
     var about = $("#About").offset().top;
     var files = $("#Files").offset().top;
     var wst = $(window).scrollTop;
 
-    if(wst>=home){
+    if(wst<=home){
         $(".layer2").css('background-image','url("https://wallpapershome.com/images/wallpapers/landscape-3840x2160-flat-4k-5k-fog-iphone-wallpaper-forest-blue-11927.jpg")')
     }
-    if(wst>=about){
+    if(wst<=about){
         $(".layer2").css('background-image','url("http://bdfjade.com/data/out/54/5612226-flat-wallpaper.jpg")')
     }
-    if(wst>=files){
+    if(wst<=files){
         $(".layer2").css('background-image','url("https://i0.wp.com/get.wallpapers8k.com/wallpapers/a/2/3/90096.jpg")')
     }
 });
 
 //StepProgressBar
 $(document).ready(function() {
-    $('.progressBar.sg').stepProgressBar({
-        currentValue: 100,
+    $('.progressBar').stepProgressBar({
+        currentValue: 0,
         steps: [
-            {value: 100,
+            {value: 80,
                 topLabel:"Sehr Gut"},
-            {value: 75,
+            {value: 60,
                 topLabel:"Gut"},
-            {value: 50,
+            {value: 40,
                 topLabel:"Bekannt"},
-            {value: 25,
+            {value: 20,
                 topLabel:"Neu"}
-        ]
+        ],
+        responsiveLimit: 100
     });
-    $('.progressBar.g').stepProgressBar({
-        currentValue: 75,
-        steps: [
-            {value: 100,
-            topLabel:"Sehr Gut"},
-            {value: 75,
-            topLabel:"Gut"},
-            {value: 50,
-            topLabel:"Bekannt"},
-            {value: 25,
-            topLabel:"Neu"}
-        ]
+    $('document, window').scroll(function () {
+        if($('html,body').scrollTop >= $('#About').offset().top) {
+            $('.progressBar.sg').stepProgressBar({
+                currentValue: 80,
+                steps: [
+                    {
+                        value: 80,
+                        topLabel: "Sehr Gut"
+                    },
+                    {
+                        value: 60,
+                        topLabel: "Gut"
+                    },
+                    {
+                        value: 40,
+                        topLabel: "Bekannt"
+                    },
+                    {
+                        value: 20,
+                        topLabel: "Neu"
+                    }
+                ],
+                responsiveLimit: 100
+            });
+            $('.progressBar.g').stepProgressBar({
+                currentValue: 60,
+                steps: [
+                    {
+                        value: 80,
+                        topLabel: "Sehr Gut"
+                    },
+                    {
+                        value: 60,
+                        topLabel: "Gut"
+                    },
+                    {
+                        value: 40,
+                        topLabel: "Bekannt"
+                    },
+                    {
+                        value: 20,
+                        topLabel: "Neu"
+                    }
+                ],
+                responsiveLimit: 100
+            });
+            $('.progressBar.b').stepProgressBar({
+                currentValue: 40,
+                steps: [
+                    {
+                        value: 80,
+                        topLabel: "Sehr Gut"
+                    },
+                    {
+                        value: 60,
+                        topLabel: "Gut"
+                    },
+                    {
+                        value: 40,
+                        topLabel: "Bekannt"
+                    },
+                    {
+                        value: 20,
+                        topLabel: "Neu"
+                    }
+                ],
+                responsiveLimit: 100
+            });
+            $('.progressBar.n').stepProgressBar({
+                currentValue: 20,
+                steps: [
+                    {
+                        value: 80,
+                        topLabel: "Sehr Gut"
+                    },
+                    {
+                        value: 60,
+                        topLabel: "Gut"
+                    },
+                    {
+                        value: 40,
+                        topLabel: "Bekannt"
+                    },
+                    {
+                        value: 20,
+                        topLabel: "Neu"
+                    }
+                ],
+                responsiveLimit: 100
+            });
+        }
     });
-    $('.progressBar.b').stepProgressBar({
-        currentValue: 50,
-        steps: [
-            {value: 100,
-                topLabel:"Sehr Gut"},
-            {value: 75,
-                topLabel:"Gut"},
-            {value: 50,
-                topLabel:"Bekannt"},
-            {value: 25,
-                topLabel:"Neu"}
-        ]
-    });
-    $('.progressBar.n').stepProgressBar({
-        currentValue: 25,
-        steps: [
-            {value: 100,
-                topLabel:"Sehr Gut"},
-            {value: 75,
-                topLabel:"Gut"},
-            {value: 50,
-                topLabel:"Bekannt"},
-            {value: 25,
-                topLabel:"Neu"}
-        ]
-    });
+    $('.tabs').tabs();
+
+    $('.progress').mouseover(function () {
+        
+    })
+
 });
+
+//carousel-Slider
+$(document).ready(function () {
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true,
+});
+});
+
+
+//Password Validator
+var access_key = "gibbiX12345";
+function validatePW() {
+    if($("#pw-input").val() == access_key){
+        M.toast({html: "Zugriff erfolgreich!"});
+        $(".secure-form").css("display","none")
+        $(".hidden-files").css("display","block");
+        do{
+            $(".hidden-files").html('  <div class="preloader-wrapper small active">\n' +
+                '    <div class="spinner-layer spinner-green-only">\n' +
+                '      <div class="circle-clipper left">\n' +
+                '        <div class="circle"></div>\n' +
+                '      </div><div class="gap-patch">\n' +
+                '        <div class="circle"></div>\n' +
+                '      </div><div class="circle-clipper right">\n' +
+                '        <div class="circle"></div>\n' +
+                '      </div>\n' +
+                '    </div>\n' +
+                '  </div>');
+        }while($(".hidden-files").has(".row"));
+        try {
+            $.get("templates/download-cards.html", function (temp_string) {
+                if(temp_string!=null){
+                    $(".hidden-files").html(temp_string);
+                }
+                if(temp_string==null) {
+                    $(".hidden-files").html("<h2>Uups...Da ist was schief gelaufen!</h2>" +
+                        "<p>Details sind im Console Log ersichtlich</p>");
+
+                }
+            }, 'html')
+        }catch(e){
+            console.log("JQuery $.get Error:"+e.message);
+        }
+
+
+    }
+    else{
+        M.toast({html: "Der eingegebene Schlüssel ist falsch!"});
+    }
+}
 
 
 
