@@ -1,0 +1,33 @@
+<div class="card-grid">
+    <div class="row">
+        <script>
+            $files = [
+                {Title:'Lebenslauf',
+                    imgurl:'img/files/sample.jpg',
+                    fileurl:'files/Lebenslauf.pdf'},
+                {Title:'Zeugnisse',
+                    imgurl:'img/files/sample.jpg',
+                    fileurl:'files/Lebenslauf.pdf'},
+                {Title:'Abacus-Zertifikat',
+                    imgurl:'img/files/sample.jpg',
+                    fileurl:'files/Lebenslauf.pdf'}
+            ];
+            var Container = $('<div />');
+            $files.forEach(function ($file) {
+                Container.append('\n <div class="col s4 m7">\n' +
+                    '            <div class="card">\n' +
+                    '                <div class="card-image">\n' +
+                    '                    <img src="'+$file.imgurl+'">\n' +
+                    '                    <span class="card-title">'+$file.Title+'</span>\n' +
+                    '                </div>\n' +
+                    '                <div class="card-action">\n' +
+                    '                    <a target="_blank" href="'+$file.fileurl+'">Öffnen</a>\n' +
+                    '                </div>\n' +
+                    '            </div>\n' +
+                    '        </div>');
+            });
+                $('.card-grid > .row').html(Container);
+        </script>
+
+    </div>
+</div>

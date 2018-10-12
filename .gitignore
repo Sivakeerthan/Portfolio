@@ -1,0 +1,6 @@
+node_modules
+templates/home.vue
+script/vue.js
+package.json
+package-lock.json
+.idea
