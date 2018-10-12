@@ -218,7 +218,7 @@ body {
                     padding: 5px;
                     padding-bottom: 10px;
                     height: 70%;
-                    overflow-y: scroll; }
+                    overflow-y: auto; }
                     body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item h2 {
                       font-size: 2em; }
                     body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item ul {
