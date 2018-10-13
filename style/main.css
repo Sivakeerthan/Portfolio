@@ -3,12 +3,13 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
-  z-index: 1; }
+  z-index: 1;
+  overflow-x: hidden; }
   body #start {
     z-index: 5;
     margin: 0;
     padding: 0;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     display: block;
     position: absolute;
@@ -20,7 +21,7 @@ body {
       right: 0;
       margin: 0 auto;
       display: inline-block;
-      width: 50%;
+      min-width: 50%;
       height: 100%; }
       body #start .logodiv img {
         height: 100%;
@@ -106,7 +107,7 @@ body {
               font-size: 10em;
               color: white;
               margin: auto 0; }
-            @media only screen and (max-width: 929px) {
+            @media only screen and (max-width: 949px) {
               body #mainpage .container section .content .thumb {
                 display: none !important; } }
           body #mainpage .container section .content .previewText {
@@ -116,30 +117,87 @@ body {
             height: 100%;
             margin: 0 auto;
             padding: 5px; }
-          body #mainpage .container section .content .projectsContent {
+          body #mainpage .container section .content .Projects-Content {
+            padding: 5px;
             height: auto;
             max-height: 80% !important;
             overflow: scroll;
             margin: 0;
             width: 100%;
             padding: 0; }
-            body #mainpage .container section .content .projectsContent .previewText {
+            body #mainpage .container section .content .Projects-Content .previewText {
               float: none;
               width: auto;
               height: 5em;
               display: block;
               margin: 0 auto; }
-              body #mainpage .container section .content .projectsContent .previewText h1 {
+              body #mainpage .container section .content .Projects-Content .previewText h1 {
                 margin: 0;
                 padding: 0; }
-            body #mainpage .container section .content .projectsContent .projectsGrid {
+            body #mainpage .container section .content .Projects-Content .projectsGrid {
               overflow: scroll;
               margin-top: 10px; }
-              body #mainpage .container section .content .projectsContent .projectsGrid .card {
+              body #mainpage .container section .content .Projects-Content .projectsGrid .card {
                 max-width: 30% !important;
                 max-height: 80% !important;
                 float: left;
                 margin: 5px; }
+          body #mainpage .container section .content .Contact-Content {
+            padding: 5px;
+            height: auto;
+            max-height: 80% !important;
+            overflow: auto;
+            margin: 0;
+            padding: 5px;
+            width: 100%; }
+            body #mainpage .container section .content .Contact-Content .previewText {
+              float: none;
+              width: auto;
+              height: 5em;
+              display: block;
+              margin: 0 auto; }
+              body #mainpage .container section .content .Contact-Content .previewText h1 {
+                margin: 0;
+                padding: 0; }
+            body #mainpage .container section .content .Contact-Content .contactInfo {
+              overflow: scroll;
+              margin-top: 10px;
+              height: 100%;
+              max-width: 30%;
+              float: left; }
+              body #mainpage .container section .content .Contact-Content .contactInfo .row {
+                height: 50%; }
+                body #mainpage .container section .content .Contact-Content .contactInfo .row .col {
+                  display: block;
+                  width: 30%;
+                  height: 100%;
+                  float: left;
+                  margin: 0;
+                  padding: 1px; }
+                  body #mainpage .container section .content .Contact-Content .contactInfo .row .col a {
+                    max-width: 100%;
+                    height: 100%; }
+                    body #mainpage .container section .content .Contact-Content .contactInfo .row .col a img {
+                      width: 100%;
+                      height: auto; }
+            body #mainpage .container section .content .Contact-Content .contactForm {
+              display: block;
+              max-width: 100%;
+              min-height: 100%; }
+              body #mainpage .container section .content .Contact-Content .contactForm form {
+                float: left;
+                max-width: 80%; }
+                body #mainpage .container section .content .Contact-Content .contactForm form .row {
+                  width: 100%;
+                  margin: 0;
+                  display: block;
+                  max-height: 3em; }
+                  body #mainpage .container section .content .Contact-Content .contactForm form .row .col {
+                    float: left;
+                    margin: 0;
+                    width: 80%; }
+                    body #mainpage .container section .content .Contact-Content .contactForm form .row .col.s6 {
+                      width: 40%; }
         body #mainpage .container section .content2 {
           position: relative;
           left: 0;
@@ -159,7 +217,7 @@ body {
               font-size: 10em;
               color: white;
               margin: auto 0; }
-            @media only screen and (max-width: 929px) {
+            @media only screen and (max-width: 949px) {
               body #mainpage .container section .content2 .thumb {
                 display: none !important; } }
           body #mainpage .container section .content2 .previewText {
@@ -196,7 +254,7 @@ body {
               left: 0;
               display: block;
               margin: 0;
-              padding: 0;
+              padding: 5px;
               width: 100%;
               overflow: hidden;
               height: 80%;
@@ -261,6 +319,7 @@ body {
             body #mainpage .container section .content2 .wrapper .Files-Content {
               height: auto;
               width: auto;
+              padding: 5px;
               color: white;
               display: block; }
               body #mainpage .container section .content2 .wrapper .Files-Content .secure-form {

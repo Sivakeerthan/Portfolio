@@ -37,15 +37,15 @@ $("#navbar").addClass('navbar-relative');
 var lastScrollTop=0;
     $(document).ready(function () {
         $(".tooltiptext").addClass('visible');
-        var st =$(this).scrollTop;
-        if(st>lastScrollTop){
-            $(".logodiv").css('top',0-lastScrollTop);
-            $(".logodiv").css('left',0-lastScrollTop);
-        }
-        else{
+        //var st =$(this).scrollTop;
+       //if(st>lastScrollTop){
+       //    $(".logodiv").css('top',0-lastScrollTop);
+       //    $(".logodiv").css('left',0-lastScrollTop);
+       //}
+       //else{
 
-        }
-        lastScrollTop = st;
+       //}
+       //lastScrollTop = st;
     });
     $(".logodiv").click(function () {
         $(".logodiv").animate({
@@ -81,6 +81,7 @@ $(document).ready(function () {
     if(wst<=files){
         $(".layer2").css('background-image','url("https://i0.wp.com/get.wallpapers8k.com/wallpapers/a/2/3/90096.jpg")')
     }
+
 });
 
 //StepProgressBar
@@ -88,9 +89,18 @@ $(document).ready(function() {
 
     $('.tabs').tabs();
 
-    $('.progress').mouseover(function () {
-        
-    })
+    $('.progress-li').mouseenter(function () {
+        var title = $('this ').children('.determinate').attr("title");
+        var value = $('this').children('span').val();
+        console.log("Title:"+title+"<br>Value:"+value);
+        $('this').children('.determinate').attr("title",value);
+        $('this').children('span').val(title);
+    }).mouseleave(function () {
+        var title2 = $('this').children('.determinate').attr("title");
+        var value2 = $('this').children('span').val();
+        $('this').children('.determinate').attr("title",value2);
+        $('this').children('span').val(title2);
+    });
 
 });
 
@@ -104,9 +114,9 @@ $('.carousel.carousel-slider').carousel({
 
 
 //Password Validator
-var access_key = "gibbiX12345";
+
 function validatePW() {
-    if($("#pw-input").val() == access_key){
+    if($("#pw-input").val() == "gibbiX12345"){
         M.toast({html: "Zugriff erfolgreich!"});
         $(".secure-form").css("display","none")
         $(".hidden-files").css("display","block");
@@ -143,6 +153,28 @@ function validatePW() {
     else{
         M.toast({html: "Der eingegebene Schlüssel ist falsch!"});
     }
+}
+
+//PHPMailer result output
+function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};
+if(getUrlParameter("result")=="fail") {
+    M.toast({html: "Ihre Nachricht konnte nicht gesendet werden. Versuchen Sie es bitte Später erneut!"});
+}
+if(getUrlParameter("result")=="success") {
+    M.toast({html: "Ihre Nachricht wurde erfolgreich gesendet!"});
 }
 
 

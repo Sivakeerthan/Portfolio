@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="script/materialize/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css"/>
-    <link rel="stylesheet" href="script/StepProgressBar/jquery.stepProgressBar.css"/>
 
     <title>Title</title>
 </head>
@@ -26,10 +25,10 @@
                 <div class="nav-content">
                     <ul class="tabs tabs-transparent">
                        <li class="tab nav-section"><a id="home-nav" href="#Home">Home</a></li>
-                       <li class="tab nav-section"><a id="about-nav" href="#About">About</a></li>
-                       <li class="tab nav-section"><a id="projects-nav" href="#Projects">Projects</a></li>
-                       <li class="tab nav-section"><a id="files-nav" href="#Files">Files</a></li>
-                       <li class="tab nav-section"><a id="contact-nav" href="#Contact">Contact</a></li>
+                       <li class="tab nav-section"><a id="about-nav" href="#About">Über</a></li>
+                       <li class="tab nav-section"><a id="projects-nav" href="#Projects">Projekte</a></li>
+                       <li class="tab nav-section"><a id="files-nav" href="#Files">Dokumente</a></li>
+                       <li class="tab nav-section"><a id="contact-nav" href="#Contact">Kontakt</a></li>
                        </ul>
                 </div>
             </div>
@@ -58,7 +57,7 @@
             <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
             <div class="wrapper">
             <div class="previewText fullWidth">
-            <h1>About</h1>
+            <h1>Über</h1>
             </div>
             <div class="card About-Content">
             <div class="left card-content div-slider carousel carousel-slider">
@@ -101,6 +100,27 @@
                         <li class="collection-item">Mutter im Haushalt unterstützen</li>
                     </ul>
                 </div>
+             <div class="carousel-item perso" href=".#four!">
+                    <h2>Sprachen</h2>
+                    <table>
+                        <tr>
+                            <th>Tamilisch</th>
+                            <td>Muttersprache</td>
+                        </tr>
+                        <tr>
+                            <th>Deutsch</th>
+                            <td>Schriftlich sehr gut,<br> mündlich gut</td>
+                        </tr>
+                        <tr>
+                            <th>Englisch</th>
+                            <td>Schriftlich sehr gut,<br> mündlich gut</td>
+                        </tr>
+                        <tr>
+                            <th>Französisch</th>
+                            <td>Schriftlich sehr gut,<br> mündlich gut</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
             <div class="card-content faehigkeiten">
                 <h2>Fähigkeiten</h2>
@@ -110,22 +130,23 @@
                             <li class="tab"><a class="active" href="#frontend">Frontend</a></li>
                             <li class="tab"><a href="#backend">Backend</a></li>
                             <li class="tab"><a href="#shell">Shell-Script</a></li>
+                            <li class="tab"><a href="#sonst">Sonstiges</a></li>
                         </ul>
                     </div>
                     <div class="card-content">
                         <div id="frontend">
                     <ul>
-                        <li><span>HTML</span>
+                        <li class="progress-li"><span>HTML</span>
                             <div class="progress">
                                 <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
                             </div>
                         </li>
-                        <li><span>CSS</span>
+                        <li class="progress-li"><span>CSS</span>
                             <div class="progress">
                                 <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
                             </div>
                         </li>
-                        <li><span>JavaScript</span>
+                        <li class="progress-li"><span>JavaScript</span>
                             <div class="progress">
                                 <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
                             </div>
@@ -133,17 +154,17 @@
 
                     </ul>
                     <ul>
-                        <li><span>SCSS</span>
+                        <li class="progress-li"><span>SCSS</span>
                             <div class="progress">
                                 <div class="determinate" style="width: 60%" title="Gut"></div>
                             </div>
                         </li>
-                        <li><span>JQuery</span>
+                        <li class="progress-li"><span>JQuery</span>
                             <div class="progress">
                                 <div class="determinate" style="width: 60%" title="Gut"></div>
                             </div>
                         </li>
-                        <li><span>Vue.JS</span>
+                        <li class="progress-li"><span>Vue.JS</span>
                             <div class="progress">
                                 <div class="determinate" style="width: 10%" title="Neu"></div>
                             </div>
@@ -152,17 +173,17 @@
                 </div>
                         <div id="backend">
                             <ul>
-                                <li><span>JAVA</span>
+                                <li class="progress-li"><span>JAVA</span>
                                     <div class="progress">
                                         <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
                                     </div>
                                 </li>
-                                <li><span>C#</span>
+                                <li class="progress-li"><span>C#</span>
                                     <div class="progress">
                                         <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
                                     </div>
                                 </li>
-                                <li><span>PHP</span>
+                                <li class="progress-li"><span>PHP</span>
                                     <div class="progress">
                                         <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
                                     </div>
@@ -172,16 +193,54 @@
                 </div>
                         <div id="shell">
                             <ul>
-                                <li><span>Bash</span>
+                                <li class="progress-li"><span>Bash</span>
                                     <div class="progress">
                                         <div class="determinate" style="width: 50%" title="Gut"></div>
                                     </div>
                                 </li>
-                                <li><span>Python</span>
+                                <li class="progress-li"><span>Python</span>
                                     <div class="progress">
                                         <div class="determinate" style="width: 50%" title="Gut"></div>
                                     </div>
                                 </li>
+                            </ul>
+                </div>
+                        <div id="sonst">
+                            <ul>
+                                <li class="progress-li"><span>Photoshop</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 50%" title="Gut"></div>
+                                    </div>
+                                </li>
+                                <li class="progress-li"><span>Premiere Pro</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 50%" title="Gut"></div>
+                                    </div>
+                                </li>
+                                <li class="progress-li"><span>SAP</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 50%" title="Gut"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul>
+
+                                <li class="progress-li"><span>Abacus</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 50%" title="Gut"></div>
+                                    </div>
+                                </li>
+                                <li class="progress-li"><span>After Effects</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 30%" title="Bekannt"></div>
+                                    </div>
+                                </li>
+                                <li class="progress-li"><span>Illustrator</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 30%" title="Bekannt"></div>
+                                    </div>
+                                </li>
+
                             </ul>
                 </div>
                     </div>
@@ -195,9 +254,9 @@
             <div class="content card-panel">
                 <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
 
-                <div class="projectsContent">
+                <div class="Projects-Content">
                     <div class="previewText">
-                        <h1>Projects</h1>
+                        <h1>Projekte</h1>
                     </div>
                     <div class="projectsGrid">
                     <div class="card">
@@ -277,7 +336,7 @@
             <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
             <div class="wrapper">
             <div class="previewText">
-            <h1>Files</h1>
+            <h1>Dokumente</h1>
             <p style="width:100%;"><br>Hier besteht ihnen die Möglichkeit,mit Hilfe des Ihnen in den Bewerbungsunterlagen mitgegebenen Zugriffscodes, einen Blick in meinen persönlichen Dokumenten zu werfen.</p>
             </div>
             <div class="Files-Content">
@@ -304,16 +363,67 @@
         <section id="Contact">
             <div class="content card-panel">
                 <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
-                <div class="previewText">
-                    <h1>Lorem Ipsum</h1>
-                    <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-                </div>
-            </div>
-            <div class="content card-panel">
-                <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
-                <div class="previewText">
-                    <h1>Lorem Ipsum</h1>
-                    <p style="width:100%;"><br>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                <div class="Contact-Content">
+                    <div class="previewText">
+                        <h1>Kontakt</h1>
+                    </div>
+                    <div class="contactInfo">
+                        <p>
+                            <span>Kontaktieren Sie mich unter:</span><br>
+                            <b>Sivakeerthan Vamanarajasekaran</b>
+                            <br>Büschiackerstrasse 10
+                            <br>3098 Schliern bei Köniz
+                            <br>Mobil: +41 76 792 47 56
+                        </p>
+                        <div class="row">
+                            <span>Oder besuchen Sie meine Sozialen-Medien:</span><br>
+                            <div class="col s1 m1">
+                                <a href="#"><img src="img/icons/fb.png" alt="Facebook"></a>
+                            </div>
+                            <div class="col s1 m1">
+                                <a href="#"><img src="img/icons/twitter.png" alt="Twitter"></a>
+                            </div>
+                            <div class="col s1 m1">
+                                <a href="#"><img src="img/icons/insta.png" alt="Instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contactForm">
+                        <a href="mailto:sivakeerthan.vamanarajasekaran@bwdbern.ch"><h2>Schreiben Sie mich An!</h2></a>
+                        <form method="post" action="mailer/mailer.php">
+                            <div class="row">
+                                <div class="input-field col s6">
+                                    <input id="first_name" name="first_name" type="text">
+                                    <label for="first_name">Vorname</label>
+                                </div>
+                                <div class="input-field col s6">
+                                    <input id="last_name" name="last_name" type="text">
+                                    <label for="last_name">Nachname</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="email" name="email" type="email" class="validate">
+                                    <label for="last_name">Email</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input id="subj" name="subj" type="text">
+                                    <label for="subj">Betreff</label>
+                                </div>
+                                <div class="input-field col s12">
+                                    <textarea id="msg" name="msg" class="materialize-textarea" data-length="300"></textarea>
+                                    <label for="msg">Nachricht</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <button class="btn waves-effect waves-light" type="submit" name="action">Senden
+                                    <i class="material-icons right">send</i>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>
