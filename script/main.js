@@ -189,7 +189,6 @@ if(getUrlParameter("result")=="success") {
 //Responsive Sidenav
 $(document).ready(function () {
    $('.sidenav').sidenav();
-    $('.sidenav > .tab').tabs();
 });
 
 
