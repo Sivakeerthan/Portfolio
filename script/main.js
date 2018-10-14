@@ -1,3 +1,26 @@
+
+//Changing BG-Image
+$(document).ready(function () {
+
+    $("a").click(function () {
+        var link = $(this).attr('href');
+        if(link == "#About" ){
+            $(".layer2").css('background-image','url("../img/bg2.jpg")')
+        }
+        if(link == "#Projects"){
+            $(".layer2").css('background-image','url("../img/bg3.jpg")')
+        }
+        if(link == "#Files"){
+            $(".layer2").css('background-image','url("../img/bg4.jpg")')
+        }
+        if(link == "#Contact"){
+            $(".layer2").css('background-image','url("../img/bg5.jpg")')
+        }
+    });
+
+
+});
+
 //Fixed navbar
 $("#navbar").addClass('navbar-relative');
     $(window).scroll(function () {
@@ -65,26 +88,7 @@ var lastScrollTop=0;
     });
 
 
-//Changing BG-Image
-$(document).ready(function () {
 
-    $("nav").click(function () {
-        if($("#About").visible(true)){
-            $(".layer2").css('background-image','url("https://wallpapershome.com/images/wallpapers/landscape-3840x2160-flat-4k-5k-fog-iphone-wallpaper-forest-blue-11927.jpg")')
-        }
-        if($("#Projects").visible(true)){
-            $(".layer2").css('background-image','url("http://bdfjade.com/data/out/54/5612226-flat-wallpaper.jpg")')
-        }
-        if($("#Files").visible(true)){
-            $(".layer2").css('background-image','url("https://i0.wp.com/get.wallpapers8k.com/wallpapers/a/2/3/90096.jpg")')
-        }
-        if($("#Contact").visible(true)){
-            $(".layer2").css('background-image','url("https://i0.wp.com/get.wallpapers8k.com/wallpapers/a/2/3/90096.jpg")')
-        }
-    });
-
-
-});
 
 //StepProgressBar
 $(document).ready(function() {
