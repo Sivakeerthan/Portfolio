@@ -122,7 +122,7 @@ $('.carousel.carousel-slider').carousel({
 //Password Validator
 
 function validatePW() {
-    var corr = "gibbiX12345";
+    var corr = "5DSXgfgP#%T";
     var val = $("#pw-input").val();
     if(val === corr){
         M.toast({html: "Zugriff erfolgreich!"});
