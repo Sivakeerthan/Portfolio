@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style/main.css"/>
 
-    <title>Title</title>
+    <title>V.Siva</title>
 </head>
 <body>
 <div id="start">
@@ -20,10 +20,12 @@
 </div>
 <div id="mainpage">
     <div id="navbar" class="">
-        <nav class="navbar-extended">
-            <div  class="nav-wrapper">
+        <nav class="nav-extended">
+            <div  class="nav-wrapper  hide-on-large-only">
+                <a href="#" class="sidenav-trigger" data-target="mobile-nav"><i class="material-icons">menu</i></a>
+            </div>
                 <div class="nav-content">
-                    <ul class="tabs tabs-transparent">
+                    <ul class="tabs tabs-transparent hide-on-med-and-down">
                        <li class="tab nav-section"><a id="home-nav" href="#Home">Home</a></li>
                        <li class="tab nav-section"><a id="about-nav" href="#About">Über</a></li>
                        <li class="tab nav-section"><a id="projects-nav" href="#Projects">Projekte</a></li>
@@ -31,13 +33,23 @@
                        <li class="tab nav-section"><a id="contact-nav" href="#Contact">Kontakt</a></li>
                        </ul>
                 </div>
-            </div>
+
         </nav>
+
+        <ul class="sidenav tabs" id="mobile-nav">
+            <li class="tab nav-section"><a  href="#Home">Home</a></li>
+            <li class="tab nav-section"><a  href="#About">Über</a></li>
+            <li class="tab nav-section"><a  href="#Projects">Projekte</a></li>
+            <li class="tab nav-section"><a  href="#Files">Dokumente</a></li>
+            <li class="tab nav-section"><a  href="#Contact">Kontakt</a></li>
+        </ul>
     </div>
     <div class="container">
         <section id="Home">
         <div class="content card-panel">
-            <i class="material-icons thumb">home</i>
+            <div class="thumb">
+            <img src="img/thumbs/home-thumb.jpg" alt="thumbnail">
+            </div>
             <div class="previewText">
             <h1>Home</h1>
             <p>Herzlich Wilkommen zu meiner Website!</p>
@@ -54,7 +66,9 @@
         </section>
         <section id="About">
         <div class="content2 card-panel">
-            <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+            <div class="thumb">
+                <img src="./img/thumbs/about-thumb.jpg" alt="thumbnail">
+            </div>
             <div class="wrapper">
             <div class="previewText fullWidth">
             <h1>Über</h1>
@@ -89,6 +103,7 @@
                     <li class="collection-item">Programmieren</li>
                     <li class="collection-item">Fussball</li>
                     <li class="collection-item">Basketball</li>
+                    <li class="collection-item">Reisen</li>
                     <li class="collection-item">Gamen</li>
                 </ul>
             </div>
@@ -188,7 +203,18 @@
                                         <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
                                     </div>
                                 </li>
-
+                            </ul>
+                            <ul>
+                                <li class="progress-li"><span>SQL</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 80%" title="Sehr Gut"></div>
+                                    </div>
+                                </li>
+                                <li class="progress-li"><span>Java(Android)</span>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 60%" title="Gut"></div>
+                                    </div>
+                                </li>
                             </ul>
                 </div>
                         <div id="shell">
@@ -252,7 +278,9 @@
         </section>
         <section id="Projects">
             <div class="content card-panel">
-                <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+                <div class="thumb">
+                    <img src="./img/thumbs/projects-thumb.jpg" alt="thumbnail">
+                </div>
 
                 <div class="Projects-Content">
                     <div class="previewText">
@@ -270,6 +298,7 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">DiscoverBern<i class="material-icons right">close</i></span>
                             <p>DiscoverBern ist eine auf das BBC-MVC (PHP MVC-Framework) basierende Plattform für Touristen,bei welcher sie ihre Erlebnisse in Bern, mit den Sehenswürdigkeiten und auch der Gastronomie Teilen. Ausserdem können Sie sich andere öffentliche Beiträge anschauen und bewerten.</p>
+                            <p>Dieses Projekt wurde im zweier Team für das üK-Modul 307 erarbeitet.</p>
                         </div>
                     </div>
                     <div class="card">
@@ -283,6 +312,7 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">BadiApp<i class="material-icons right">close</i></span>
                             <p>BadiApp ist eine Android-App welche den Benutzer die nächstgelegene Schwimmbäder zeigt und die wichtigsten Informationen ausgibt.</p>
+                            <p>Dieses Projekt wurde im zweier Team für das üK-Modul 335 erarbeitet.</p>
                         </div>
                     </div>
                     <div class="card">
@@ -296,11 +326,12 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">ModuleRepetitionTool-SJ<i class="material-icons right">close</i></span>
                             <p>ModuleRepetitionTool-SJ ist eine Plattform, um sein Wissen aus den Informatik-Modulen durch verschiedensten Testarten zu überprüfen und den Stoff zu Repetieren. Bisher dient es nur zur Repetition von PHP-Modulen, jedoch kann es auch für die anderen Modulen eingesetzt werden.</p>
+                            <p>Dies ist ein IDPA-Projekt, welches im Tandem entwickelt wird</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/projects/MRT.jpg">
+                            <img class="activator" src="img/projects/Systema-CAI.jpg">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Systema-CAI<i class="material-icons right">more_vert</i></span>
@@ -309,11 +340,12 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Systema-CAI<i class="material-icons right">close</i></span>
                             <p>Systema-CAI ist eine moderne Lösung für das Absenzenwesen in der BWD, welches eine einfache Verwaltung der Absenzen ermöglicht. Dafür müssen sich die Benutzer nur in diesem Portal anmelden und schon haben sie den jeweiligen Überblick. Der Überblick variiert je nach Position(Schüler,Sekretariat,Lehrer,Direktor) des Benutzers.</p>
+                            <p>Dieses Projekt ist ein Schulprojekt, woran 4 Personen beteiligt sind</p>
                         </div>
                     </div>
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
-                            <img class="activator" src="img/projects/MRT.jpg">
+                            <img class="activator unselectable" src="img/projects/CP.PNG">
                         </div>
                         <div class="card-content">
                             <span class="card-title activator grey-text text-darken-4">Restaurant Lachen Control Panel<i class="material-icons right">more_vert</i></span>
@@ -322,6 +354,7 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4">Restaurant Lachen Control Panel<i class="material-icons right">close</i></span>
                             <p>Dies ist eine Benutzeroberfläche für die Verwaltung der Webseite, von unserem Restaurant. Sie basiert auch auf dem BBC-MVC Framework und arbeitet mit einer MySQL-Datenbank im Hintergrund. Sie ermöglicht den Benutzern, auch ohne HTML-kenntnisse die Menus auf der Webseite einzutragen.</p>
+                            <p>CP ist ein Nebenprojekt, welches ich alleine Entwickelt habe</p>
                         </div>
                         <div class="card-action">
                             <a target="_blank" href="http://cp.restaurant-lachen.ch">Anschauen</a>
@@ -333,7 +366,9 @@
         </section>
         <section id="Files">
         <div class="content2 card-panel">
-            <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+            <div class="thumb">
+                <img src="./img/thumbs/files-thumb.jpg" alt="thumbnail">
+            </div>
             <div class="wrapper">
             <div class="previewText">
             <h1>Dokumente</h1>
@@ -345,7 +380,7 @@
                     <div class="row">
                         <div class="input-field col s6 l6 m6">
                             <i class="material-icons prefix">lock</i>
-                            <input id="pw-input" name="pw-input" type="password" class="validate">
+                            <input id="pw-input" type="password" class="validate">
                             <label for="pw-input">Zugriffscode</label>
                         </div>
                     </div>
@@ -362,7 +397,9 @@
         </section>
         <section id="Contact">
             <div class="content card-panel">
-                <img src="./img/thumbs/thumb1.png" alt="thumbnail"  class="thumb">
+                <div class="thumb">
+                    <img src="./img/thumbs/contact-thumb.jpg" alt="thumbnail">
+                </div>
                 <div class="Contact-Content">
                     <div class="previewText">
                         <h1>Kontakt</h1>
@@ -378,17 +415,17 @@
                         <div class="row">
                             <span>Oder besuchen Sie meine Sozialen-Medien:</span><br>
                             <div class="col s1 m1">
-                                <a href="#"><img src="img/icons/fb.png" alt="Facebook"></a>
+                                <a href="https://www.facebook.com/svamanarajasekaran"><img src="img/icons/fb.png" alt="Facebook"></a>
                             </div>
                             <div class="col s1 m1">
-                                <a href="#"><img src="img/icons/twitter.png" alt="Twitter"></a>
+                                <a href="https://twitter.com/SVRNM1"><img src="img/icons/twitter.png" alt="Twitter"></a>
                             </div>
                             <div class="col s1 m1">
-                                <a href="#"><img src="img/icons/insta.png" alt="Instagram"></a>
+                                <a href="https://github.com/Sivakeerthan"><img src="img/icons/github.png" alt="GitHub"></a>
                             </div>
                         </div>
                     </div>
-                    <div class="contactForm">
+                    <div class="contactForm hide-on-small-and-down">
                         <a href="mailto:sivakeerthan.vamanarajasekaran@bwdbern.ch"><h2>Schreiben Sie mich An!</h2></a>
                         <form method="post" action="php/mailer.php">
                             <div class="row">
@@ -418,7 +455,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <button class="btn waves-effect waves-light" type="submit" name="action">Senden
+                                <button class="btn waves-effect waves-light" type="submit" name="submit">Senden
                                     <i class="material-icons right">send</i>
                                 </button>
                             </div>

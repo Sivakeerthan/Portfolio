@@ -10,6 +10,9 @@ body{
   width:100%;
   z-index: 1;
   overflow-x:hidden;
+  .sidenav-overlay{
+    z-index: 2 !important;
+  }
   #start{
     z-index:5;
     margin:0;
@@ -26,9 +29,9 @@ body{
       bottom:0;
       right:0;
       margin:0 auto;
-      display:inline-block;
-      min-width:50%;
-      height:100%;
+      min-width:100%;
+      min-height:100%;
+      height:auto;
       img{
         height:100%;
         width:auto;
@@ -36,6 +39,7 @@ body{
         bottom:0;
         right:0;
         margin:0 auto;
+        display: inline-block;
 
       }
       .tooltiptext{
@@ -84,7 +88,20 @@ body{
     nav {
       position:inherit;
       background-color: $accent-color;
-      height:auto;
+    }
+    .sidenav{
+      z-index:9999 !important;
+      display:block;
+      background-color: $accent-color;
+      li{
+        float:none;
+        display:block;
+        margin:0 auto;
+        a{
+          display:inline;
+          color:white !important;
+        }
+      }
     }
   }
     .navbar-relative{
@@ -109,120 +126,126 @@ body{
       width: 100%;
       height: 100%;
       display: block;
+      .thumb{
+        max-height: 100%;
+        max-width:30%;
+        float:left;
+        display:inline-block;
+        @media only screen and (max-width: 949px) {
+          display: none !important;
+        }
+        img{
+          float:right;
+          max-height:100%;
+          width:auto;
+        }
+      }
       .content {
         position: relative;
         left: 0;
         background-color: $light-primary-color;
         height: auto;
-        max-height:80%;
+        max-height: 80%;
         width: 100vw;
         margin: 2.5em 0;
         padding: 0;
         overflow: hidden;
         display: flex;
-        .thumb{
-          height: 100%;
-          width:auto;
-          float:left;
-          &.material-icons{
-            font-size:10em;
-            color: white;
-            margin:auto 0;
-          }
-          @media only screen and (max-width: 949px) {
-            display: none !important;
-          }
-        }
         .previewText {
           display: inline-block;
           posititon: relative;
           width: 100%;
           height: 100%;
           margin: 0 auto;
-          padding:5px;
+          padding: 5px;
         }
-        .Projects-Content{
-          padding:5px;
+        .Projects-Content {
+          padding: 5px;
           height: auto;
-          max-height:80%!important;
-          overflow:scroll;
-          margin:0;
+          max-height: 80% !important;
+          overflow: scroll;
+          margin: 0;
           width: 100%;
-          padding:0;
+          padding: 0;
           .previewText {
             float: none;
             width: auto;
             height: 5em;
             display: block;
-            margin:0 auto;
-            h1{
-              margin:0;
-              padding:0;
+            margin: 0 auto;
+            h1 {
+              margin: 0;
+              padding: 0;
             }
           }
-          .projectsGrid{
+          .projectsGrid {
             overflow: scroll;
-            margin-top:10px;
-            .card{
-              max-width:30% !important;
-              max-height:80% !important;
-              float:left;
-              margin:5px;
+            margin-top: 10px;
+            .card {
+              max-width: 30% !important;
+              max-height: 80% !important;
+              float: left;
+              margin: 5px;
             }
           }
         }
-        .Contact-Content{
-          padding:5px;
+        .Contact-Content {
+          padding: 5px;
           height: auto;
-          max-height:80%!important;
-          overflow:auto;
-          margin:0;
-          padding:5px;
+          max-height: 80% !important;
+          overflow: auto;
+          margin: 0;
+          padding: 5px;
           width: 100%;
           .previewText {
             float: none;
             width: auto;
             height: 5em;
             display: block;
-            margin:0 auto;
-            h1{
-              margin:0;
-              padding:0;
+            margin: 0 auto;
+            h1 {
+              margin: 0;
+              padding: 0;
             }
           }
-          .contactInfo{
+          .contactInfo {
             overflow: scroll;
-            margin-top:10px;
+            margin-top: 10px;
             height: 100%;
             max-width: 30%;
-            float:left;
-            .row{
-              height:50%;
-              .col{
-                display:block;
-                width:30%;
-                height:100%;
-                float:left;
-                margin:0;
-                padding:1px;
+            padding:5px;
+            float: left;
+            @media only screen and (max-width: 949px) {
+              max-width: 100%;
+            }
+            .row {
+              height: 50%;
+              .col {
+                display: block;
+                width: 30%;
+                height: 100%;
+                float: left;
+                margin: 0;
+                padding: 1px;
                 a {
                   max-width: 100%;
-                  height:100%;
+                  height: 100%;
                   img {
-                    width:100%;
-                    height:auto;
+                    width: 100%;
+                    height: auto;
 
                   }
                 }
               }
             }
+
           }
-          .contactForm{
-            display:block;
-            max-width:100%;
-            min-height:100%;
+          .contactForm {
+            display: block;
+            max-width: 100%;
+            min-height: 100%;
             form {
-              float:left;
+              float: left;
               max-width: 80%;
               .row {
                 width: 100%;
@@ -241,7 +264,7 @@ body{
             }
           }
         }
-        }
+      }
       .content2 {
         position: relative;
         left: 0;
@@ -253,19 +276,7 @@ body{
         padding: 0;
         overflow: hidden;
         display: flex;
-        .thumb{
-          height: 100%;
-          width:auto;
-          float:left;
-          &.material-icons{
-            font-size:10em;
-            color: white;
-            margin:auto 0;
-          }
-          @media only screen and (max-width: 949px) {
-            display: none !important;
-          }
-        }
+
         .previewText {
           display: inline-block;
           posititon: relative;
@@ -316,6 +327,7 @@ body{
               background-color: inherit;
               color: white;
             }
+
             .card-content {
               position: relative;
               height: 100%;
@@ -412,6 +424,13 @@ body{
                     max-height: 50%;
                     float:left !important;
                     max-width:30% !important;
+                    .card{
+                      .card-image{
+                        img{
+                          filter:brightness(0.5);
+                        }
+                      }
+                    }
                   }
                 }
               }
@@ -436,6 +455,7 @@ body{
       height: 100%;
       width:100%;
       background-image: url("../img/bg1.jpg");
+
       @media screen and (orientation:portrait) {
         background-size: auto 100%;
       }
@@ -450,5 +470,11 @@ body{
   ::-webkit-scrollbar{
     width: 0;
     background: transparent;
+  }
+  .unselectable {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
   }
 }
