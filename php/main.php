@@ -20,8 +20,11 @@
     }
     $row = $result->fetch_row();
     $key = $row[0];
+    $action = sha1(htmlspecialchars($_POST['action']));
     $result->close();
-    if($key == sha1($_POST['action'])){
+    echo "<script>console.log('Key='+$key)</script>";
+    echo "<script>console.log('Input='+$action)</script>";
+    if($key == $action){
         return true;
     }
     else{
