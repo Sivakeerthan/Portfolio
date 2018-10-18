@@ -124,7 +124,6 @@ function validatePW() {
         type: 'post',
         success: function(output) {
             var corr = output;
-            alert("output ="+output);
             if(corr){
                 M.toast({html: "Zugriff erfolgreich!"});
                 $(".secure-form").css("display","none")
