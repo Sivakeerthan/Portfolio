@@ -80,9 +80,6 @@ var lastScrollTop=0;
         $('html, body').animate({
             scrollTop: $("#mainpage").offset().top
         },3000);
-        if($('html,body').scrollTop >= $("#mainpage").offset().top){
-            $("#start").css('display','none');
-        }
 
 
     });
