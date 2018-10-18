@@ -56,20 +56,9 @@ $("#navbar").addClass('navbar-relative');
 
 
 //Start-Page Animations
-
-var lastScrollTop=0;
     $(document).ready(function () {
         $(".tooltiptext").addClass('visible');
-        //var st =$(this).scrollTop;
-       //if(st>lastScrollTop){
-       //    $(".logodiv").css('top',0-lastScrollTop);
-       //    $(".logodiv").css('left',0-lastScrollTop);
-       //}
-       //else{
 
-       //}
-       //lastScrollTop = st;
-    });
     $(".logodiv").click(function () {
         $(".logodiv").animate({
             left: '100%',
@@ -83,7 +72,7 @@ var lastScrollTop=0;
 
 
     });
-
+    });
 
 
 
