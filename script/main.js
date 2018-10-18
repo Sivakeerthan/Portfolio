@@ -122,46 +122,53 @@ $('.carousel.carousel-slider').carousel({
 //Password Validator
 
 function validatePW() {
-    var corr = "5DSXgfgP#%T";
-    var val = $("#pw-input").val();
-    if(val === corr){
-        M.toast({html: "Zugriff erfolgreich!"});
-        $(".secure-form").css("display","none")
-        $(".hidden-files").css("display","block");
+    $.ajax({ url: '../php/main.php',
+        data: {action: $("#pw-input").val() },
+        type: 'post',
+        success: function(output) {
+            var corr = output;
+            alert("output ="+output);
+            if(corr){
+                M.toast({html: "Zugriff erfolgreich!"});
+                $(".secure-form").css("display","none")
+                $(".hidden-files").css("display","block");
 
-        try {
-            $.get("templates/download-cards.html", function (temp_string) {
-                if(temp_string!=null){
-                    $(".hidden-files").html(temp_string);
-                }
-                if(temp_string==null) {
-                    $(".hidden-files").html("<h2>Uups...Da ist was schief gelaufen!</h2>" +
-                        "<p>Details sind im Console Log ersichtlich</p>");
+                try {
+                    $.get("templates/download-cards.html", function (temp_string) {
+                        if(temp_string!=null){
+                            $(".hidden-files").html(temp_string);
+                        }
+                        if(temp_string==null) {
+                            $(".hidden-files").html("<h2>Uups...Da ist was schief gelaufen!</h2>" +
+                                "<p>Details sind im Console Log ersichtlich</p>");
 
+                        }
+                    }, 'html')
+                }catch(e){
+                    console.log("JQuery $.get Error:"+e.message);
                 }
-            }, 'html')
-        }catch(e){
-            console.log("JQuery $.get Error:"+e.message);
+
+                $(window).load(function () {
+                    $(".hidden-files").html('  <div class="preloader-wrapper small active">\n' +
+                        '    <div class="spinner-layer spinner-green-only">\n' +
+                        '      <div class="circle-clipper left">\n' +
+                        '        <div class="circle"></div>\n' +
+                        '      </div><div class="gap-patch">\n' +
+                        '        <div class="circle"></div>\n' +
+                        '      </div><div class="circle-clipper right">\n' +
+                        '        <div class="circle"></div>\n' +
+                        '      </div>\n' +
+                        '    </div>\n' +
+                        '  </div>');
+                });
+
+            }
+            else{
+                M.toast({html: "Der eingegebene Schlüssel ist falsch!"});
+            }
         }
+    });
 
-        $(window).load(function () {
-            $(".hidden-files").html('  <div class="preloader-wrapper small active">\n' +
-                '    <div class="spinner-layer spinner-green-only">\n' +
-                '      <div class="circle-clipper left">\n' +
-                '        <div class="circle"></div>\n' +
-                '      </div><div class="gap-patch">\n' +
-                '        <div class="circle"></div>\n' +
-                '      </div><div class="circle-clipper right">\n' +
-                '        <div class="circle"></div>\n' +
-                '      </div>\n' +
-                '    </div>\n' +
-                '  </div>');
-        });
-
-    }
-    else{
-        M.toast({html: "Der eingegebene Schlüssel ist falsch!"});
-    }
 }
 
 //PHPMailer result output

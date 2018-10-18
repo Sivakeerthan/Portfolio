@@ -5,20 +5,27 @@
  * Date: 18.10.2018
  * Time: 07:59
  */
-public function getKey(){
+
     $host = "127.0.0.1";
     $username = "root";
     $pw = "";
     $dbname = "svrnmdb";
     $db = new mysqli($host,$username,$pw,$dbname);
-    $query = "SELECT `key` FROM user";
+    $query = "SELECT `key` FROM user WHERE uid = 1";
     $statement = $db->prepare($query);
     $statement->execute();
     $result = $statement->get_result();
     if (!$result) {
         throw new Exception($statement->error);
     }
-    $key = $result->fetch_object();
+    $row = $result->fetch_row();
+    $key = $row[0];
     $result->close();
-    return $key;
-}
+    if($key == sha1($_POST['action'])){
+        return true;
+    }
+    else{
+        return false;
+    }
+
+?>
