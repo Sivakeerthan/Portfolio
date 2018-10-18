@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb6185db-3d6a-4ceb-9b07-09abca8edb73" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/php/files.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/download-cards.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/download-cards.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/files.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/files.php" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -72,7 +71,7 @@
           <entry key="html" value="1615" />
           <entry key="js" value="2097" />
           <entry key="json" value="10" />
-          <entry key="php" value="1433" />
+          <entry key="php" value="1450" />
           <entry key="scss" value="1032" />
         </counts>
       </usages-collector>
@@ -81,7 +80,7 @@
           <entry key="HTML" value="1645" />
           <entry key="JSON" value="10" />
           <entry key="JavaScript" value="2091" />
-          <entry key="PHP" value="1409" />
+          <entry key="PHP" value="1426" />
           <entry key="SCSS" value="1032" />
         </counts>
       </usages-collector>
@@ -152,7 +151,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/download-cards.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -184,11 +183,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/files.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
+            <state relative-caret-position="306">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -241,8 +240,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/script/main.js" />
         <option value="$PROJECT_DIR$/php/lebenslauf.php" />
-        <option value="$PROJECT_DIR$/php/files.php" />
         <option value="$PROJECT_DIR$/templates/download-cards.html" />
+        <option value="$PROJECT_DIR$/php/files.php" />
       </list>
     </option>
   </component>
@@ -261,7 +260,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-7" />
     <option name="width" value="1053" />
     <option name="height" value="1047" />
@@ -318,7 +317,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539851456570" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539852433595" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -425,18 +424,18 @@
       <workItem from="1539781451363" duration="39000" />
       <workItem from="1539786848282" duration="1180000" />
       <workItem from="1539842234631" duration="1544000" />
-      <workItem from="1539843853721" duration="6398000" />
+      <workItem from="1539843853721" duration="7294000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117550000" />
+    <option name="totallyTimeSpent" value="118446000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1053" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30715004" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30715004" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Learn" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -453,7 +452,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49947312" visible="true" weight="0.2354874" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49947312" visible="true" weight="0.2354874" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50052685" side_tool="true" weight="0.33259177" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -571,13 +570,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
@@ -629,17 +621,24 @@
     <entry file="file://$PROJECT_DIR$/php/zertifikate.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/files.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/download-cards.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="55" lean-forward="true" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/files.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
         </state>
       </provider>
     </entry>

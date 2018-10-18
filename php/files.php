@@ -6,19 +6,19 @@
  * Time: 10:22
  */
 if($_GET["type"]="lebenslauf"){
-header('Content-Type: file/pdf');
+header('Content-Type: application/pdf');
 readfile('/files/Lebenslauf.pdf');
 }
 if($_GET["type"]="zeugnisse"){
-    header('Content-Type: file/pdf');
+    header('Content-Type: application/pdf');
     readfile('/files/Zeugnisse.pdf');
 }
 if($_GET["type"]="zertifikate"){
-    header('Content-Type: file/pdf');
+    header('Content-Type: application/pdf');
     readfile('/files/Zertifikate.pdf');
 }
 if($_GET["type"]="uk"){
-    header('Content-Type: file/pdf');
+    header('Content-Type: application/pdf');
     readfile('/files/UK.pdf');
 }
 ?>
