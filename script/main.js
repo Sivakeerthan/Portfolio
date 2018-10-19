@@ -84,7 +84,6 @@ $(document).ready(function() {
     $('.progress-li').mouseenter(function () {
         var title = $(this ).find('.determinate').attr("title");
         var value = $(this).find('span').text();
-        console.log("Title:"+title+"<br>Value:"+value);
         $(this).find('.determinate').attr("title",value);
         $(this).find('span').text(title);
     }).mouseleave(function () {
@@ -92,6 +91,18 @@ $(document).ready(function() {
         var value2 = $(this).find('span').text();
         $(this ).find(".determinate").attr("title",value2);
         $(this).find("span").text(title2);
+    });
+    $('.progress-li').on("touchstart",function (e) {
+        var title3 = $(this ).find('.determinate').attr("title");
+        var value3= $(this).find('span').text();
+        $(this).find('.determinate').attr("title",value3);
+        $(this).find('span').text(title3);
+    });
+    $('.progress-li').on("touchend",function (e) {
+        var title4 = $(this).find('.determinate').attr("title");
+        var value4 = $(this).find('span').text();
+        $(this ).find(".determinate").attr("title",value4);
+        $(this).find("span").text(title4);
     });
 
 });
@@ -117,7 +128,7 @@ function validatePW() {
                 M.toast({html: "Zugriff erfolgreich!"});
                 $(".secure-form").css("display","none")
                 $(".hidden-files").css("display","block");
-
+3
                 try {
                     $.get("templates/download-cards.html", function (temp_string) {
                         if(temp_string!=null){
@@ -133,19 +144,7 @@ function validatePW() {
                     console.log("JQuery $.get Error:"+e.message);
                 }
 
-                $(window).load(function () {
-                    $(".hidden-files").html('  <div class="preloader-wrapper small active">\n' +
-                        '    <div class="spinner-layer spinner-green-only">\n' +
-                        '      <div class="circle-clipper left">\n' +
-                        '        <div class="circle"></div>\n' +
-                        '      </div><div class="gap-patch">\n' +
-                        '        <div class="circle"></div>\n' +
-                        '      </div><div class="circle-clipper right">\n' +
-                        '        <div class="circle"></div>\n' +
-                        '      </div>\n' +
-                        '    </div>\n' +
-                        '  </div>');
-                });
+
 
             }
             else{
@@ -181,6 +180,25 @@ if(getUrlParameter("result")=="success") {
 //Responsive Sidenav
 $(document).ready(function () {
    $('.sidenav').sidenav();
+   $('.sidenav > .tab').click(function(){
+        M.Sidenav.init(document.querySelectorAll('.sidenav')).close();
+       }
+   );
+});
+
+//loading-screen
+$(window).load(function () {
+    $(".hidden-files").html('  <div class="preloader-wrapper small active">\n' +
+        '    <div class="spinner-layer spinner-green-only">\n' +
+        '      <div class="circle-clipper left">\n' +
+        '        <div class="circle"></div>\n' +
+        '      </div><div class="gap-patch">\n' +
+        '        <div class="circle"></div>\n' +
+        '      </div><div class="circle-clipper right">\n' +
+        '        <div class="circle"></div>\n' +
+        '      </div>\n' +
+        '    </div>\n' +
+        '  </div>');
 });
 
 

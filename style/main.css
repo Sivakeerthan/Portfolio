@@ -133,9 +133,8 @@ body {
             padding: 5px; }
           body #mainpage .container section .content .Projects-Content {
             padding: 5px;
-            height: auto;
             max-height: 80% !important;
-            overflow: scroll;
+            overflow-y: auto;
             margin: 0;
             width: 100%;
             padding: 0; }
@@ -149,13 +148,16 @@ body {
                 margin: 0;
                 padding: 0; }
             body #mainpage .container section .content .Projects-Content .projectsGrid {
-              overflow: scroll;
-              margin-top: 10px; }
+              margin: 0 auto; }
               body #mainpage .container section .content .Projects-Content .projectsGrid .card {
-                max-width: 30% !important;
-                max-height: 80% !important;
+                min-width: 30% !important;
+                min-height: 80% !important;
                 float: left;
-                margin: 5px; }
+                margin: 5px;
+                padding: 5px; }
+                @media screen and (max-width: 649px) {
+                  body #mainpage .container section .content .Projects-Content .projectsGrid .card {
+                    float: none; } }
           body #mainpage .container section .content .Contact-Content {
             padding: 5px;
             height: auto;
@@ -263,7 +265,7 @@ body {
               margin: 0;
               padding: 5px;
               width: 100%;
-              overflow: hidden;
+              overflow-y: auto;
               height: 80%;
               box-shadow: none;
               background-color: #3F51B5; }
@@ -275,10 +277,13 @@ body {
                 height: 100%; }
                 body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider {
                   width: auto;
-                  max-width: 40% !important;
-                  min-width: 40% !important;
+                  min-width: 40%;
                   margin: 0;
+                  float: left;
                   min-height: 100% !important; }
+                  @media screen and (max-width: 649px) {
+                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider {
+                      float: none; } }
                   body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item {
                     padding: 5px;
                     padding-bottom: 10px;
@@ -302,9 +307,12 @@ body {
                   right: 0;
                   overflow: hidden;
                   width: auto;
-                  max-width: 60% !important;
-                  min-height: 80% !important;
-                  margin: 0; }
+                  min-width: 60%;
+                  min-height: 100% !important;
+                  margin: 0 0 10px 0; }
+                  @media screen and (max-width: 649px) {
+                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten {
+                      margin-left: 0; } }
                   body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard {
                     width: 100%;
                     height: 100% !important;
@@ -326,6 +334,7 @@ body {
             body #mainpage .container section .content2 .wrapper .Files-Content {
               height: auto;
               width: auto;
+              overflow-y: auto;
               padding: 5px;
               color: white;
               display: block; }
@@ -340,14 +349,15 @@ body {
                   display: block;
                   height: auto;
                   max-height: 50% !important; }
-                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row {
-                    overflow-x: scroll; }
-                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
-                      max-height: 50%;
-                      float: left !important;
-                      max-width: 30% !important; }
-                      body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col .card .card-image img {
-                        filter: brightness(0.5); }
+                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
+                    max-height: 50%;
+                    float: left;
+                    max-width: 30% !important; }
+                    @media screen and (max-width: 649px) {
+                      body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
+                        float: none; } }
+                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col .card .card-image img {
+                      filter: brightness(0.5); }
   body #bg {
     z-index: -1;
     height: auto;
