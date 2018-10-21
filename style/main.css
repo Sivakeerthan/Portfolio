@@ -1,396 +1,72 @@
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  overflow-x: hidden; }
-  body .sidenav-overlay {
-    z-index: 2 !important; }
-  body #start {
-    z-index: 5;
-    margin: 0;
-    padding: 0;
-    min-width: 100%;
-    height: 100%;
-    display: block;
-    position: absolute;
-    background-color: rgba(48, 63, 159, 0.5);
-    overflow: hidden; }
-    body #start .logodiv {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      margin: 0 auto;
-      min-width: 100%;
-      min-height: 100%;
-      height: auto; }
-      body #start .logodiv img {
-        height: 100%;
-        width: auto;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        margin: 0 auto;
-        display: inline-block; }
-      body #start .logodiv .tooltiptext {
-        width: 120px;
-        background-color: #FFC107;
-        visibility: hidden;
-        color: white;
-        text-align: center;
-        padding: 5px 0;
-        border-radius: 6px;
-        position: absolute;
-        z-index: 60;
-        bottom: 125%;
-        left: 50%;
-        margin-left: -60px;
-        opacity: 0;
-        transition: opacity 0.3s; }
-        body #start .logodiv .tooltiptext::after {
-          content: " ";
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          margin-left: -5px;
-          border: 5px solid #FFC107; }
-        body #start .logodiv .tooltiptext .visible {
-          visibility: visible;
-          opacity: 1; }
-  body #mainpage {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: block;
-    width: 100%;
-    height: 100%; }
-    body #mainpage #navbar {
-      z-index: 10;
-      width: 100%; }
-      body #mainpage #navbar nav {
-        position: inherit;
-        background-color: #FFC107; }
-      body #mainpage #navbar .sidenav {
-        z-index: 9999 !important;
-        display: block;
-        background-color: #FFC107; }
-        body #mainpage #navbar .sidenav li {
-          float: none;
-          display: block;
-          margin: 0 auto; }
-          body #mainpage #navbar .sidenav li a {
-            display: inline;
-            color: white !important; }
-    body #mainpage .navbar-relative {
-      position: relative;
-      top: 0; }
-    body #mainpage .navbar-fixed {
-      position: fixed;
-      top: 0; }
-    body #mainpage .container {
-      z-index: 2;
-      width: 100%;
-      height: 100%;
-      position: relative;
-      padding: 0;
-      margin: 0px;
-      display: block; }
-      body #mainpage .container section {
-        padding-top: 10%;
-        width: 100%;
-        height: 100%;
-        display: block; }
-        body #mainpage .container section .thumb {
-          max-height: 100%;
-          max-width: 30%;
-          float: left;
-          display: inline-block; }
-          @media only screen and (max-width: 949px) {
-            body #mainpage .container section .thumb {
-              display: none !important; } }
-          body #mainpage .container section .thumb img {
-            float: right;
-            max-height: 100%;
-            width: auto; }
-        body #mainpage .container section .content {
-          position: relative;
-          left: 0;
-          background-color: #C5CAE9;
-          height: auto;
-          max-height: 80%;
-          width: 100vw;
-          margin: 2.5em 0;
-          padding: 0;
-          overflow: hidden;
-          display: flex; }
-          body #mainpage .container section .content .previewText {
-            display: inline-block;
-            posititon: relative;
-            width: 100%;
-            height: 100%;
-            margin: 0 auto;
-            padding: 5px; }
-          body #mainpage .container section .content .Projects-Content {
-            padding: 5px;
-            max-height: 80% !important;
-            overflow-y: auto;
-            margin: 0;
-            width: 100%;
-            padding: 0; }
-            body #mainpage .container section .content .Projects-Content .previewText {
-              float: none;
-              width: auto;
-              height: 5em;
-              display: block;
-              margin: 0 auto; }
-              body #mainpage .container section .content .Projects-Content .previewText h1 {
-                margin: 0;
-                padding: 0; }
-            body #mainpage .container section .content .Projects-Content .projectsGrid {
-              margin: 0 auto; }
-              body #mainpage .container section .content .Projects-Content .projectsGrid .card {
-                min-width: 30% !important;
-                min-height: 80% !important;
-                float: left;
-                margin: 5px;
-                padding: 5px; }
-                @media screen and (max-width: 649px) {
-                  body #mainpage .container section .content .Projects-Content .projectsGrid .card {
-                    float: none; } }
-          body #mainpage .container section .content .Contact-Content {
-            padding: 5px;
-            height: auto;
-            max-height: 80% !important;
-            overflow: auto;
-            margin: 0;
-            padding: 5px;
-            width: 100%; }
-            body #mainpage .container section .content .Contact-Content .previewText {
-              float: none;
-              width: auto;
-              height: 5em;
-              display: block;
-              margin: 0 auto; }
-              body #mainpage .container section .content .Contact-Content .previewText h1 {
-                margin: 0;
-                padding: 0; }
-            body #mainpage .container section .content .Contact-Content .contactInfo {
-              overflow: scroll;
-              margin-top: 10px;
-              height: 100%;
-              max-width: 30%;
-              padding: 5px;
-              float: left; }
-              @media only screen and (max-width: 949px) {
-                body #mainpage .container section .content .Contact-Content .contactInfo {
-                  max-width: 100%; } }
-              body #mainpage .container section .content .Contact-Content .contactInfo .row {
-                height: 50%; }
-                body #mainpage .container section .content .Contact-Content .contactInfo .row .col {
-                  display: block;
-                  width: 30%;
-                  height: 100%;
-                  float: left;
-                  margin: 0;
-                  padding: 1px; }
-                  body #mainpage .container section .content .Contact-Content .contactInfo .row .col a {
-                    max-width: 100%;
-                    height: 100%; }
-                    body #mainpage .container section .content .Contact-Content .contactInfo .row .col a img {
-                      width: 100%;
-                      height: auto; }
-            body #mainpage .container section .content .Contact-Content .contactForm {
-              display: block;
-              max-width: 100%;
-              min-height: 100%; }
-              body #mainpage .container section .content .Contact-Content .contactForm form {
-                float: left;
-                max-width: 80%; }
-                body #mainpage .container section .content .Contact-Content .contactForm form .row {
-                  width: 100%;
-                  margin: 0;
-                  display: block;
-                  max-height: 3em; }
-                  body #mainpage .container section .content .Contact-Content .contactForm form .row .col {
-                    float: left;
-                    margin: 0;
-                    width: 80%; }
-                    body #mainpage .container section .content .Contact-Content .contactForm form .row .col.s6 {
-                      width: 40%; }
-        body #mainpage .container section .content2 {
-          position: relative;
-          left: 0;
-          background-color: #3F51B5;
-          height: auto;
-          max-height: 100%;
-          width: 100vw;
-          margin: 2.5em 0;
-          padding: 0;
-          overflow: hidden;
-          display: flex; }
-          body #mainpage .container section .content2 .previewText {
-            display: inline-block;
-            posititon: relative;
-            width: 100%;
-            height: 100%;
-            margin: 0 auto;
-            padding: 5px;
-            color: white; }
-          body #mainpage .container section .content2 .wrapper {
-            height: auto;
-            min-height: 100%;
-            margin: 0;
-            width: 100%;
-            padding: 0;
-            color: white;
-            background-color: #3F51B5; }
-            body #mainpage .container section .content2 .wrapper .previewText {
-              float: left;
-              width: auto;
-              height: auto;
-              display: block;
-              margin: 0 auto;
-              color: white; }
-              body #mainpage .container section .content2 .wrapper .previewText h1 {
-                margin: 0;
-                padding: 0; }
-            body #mainpage .container section .content2 .wrapper div {
-              width: 100%;
-              background-color: inherit; }
-            body #mainpage .container section .content2 .wrapper .About-Content {
-              position: relative;
-              left: 0;
-              display: block;
-              margin: 0;
-              padding: 5px;
-              width: 100%;
-              overflow-y: auto;
-              height: 80%;
-              box-shadow: none;
-              background-color: #3F51B5; }
-              body #mainpage .container section .content2 .wrapper .About-Content div {
-                background-color: inherit;
-                color: white; }
-              body #mainpage .container section .content2 .wrapper .About-Content .card-content {
-                position: relative;
-                height: 100%; }
-                body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider {
-                  width: auto;
-                  min-width: 40%;
-                  margin: 0;
-                  float: left;
-                  min-height: 100% !important; }
-                  @media screen and (max-width: 649px) {
-                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider {
-                      float: none; } }
-                  body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item {
-                    padding: 5px;
-                    padding-bottom: 10px;
-                    height: 70%;
-                    overflow-y: auto; }
-                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item h2 {
-                      font-size: 2em; }
-                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item ul {
-                      border: none;
-                      border-bottom: 1px solid rgba(0, 0, 0, 0.12); }
-                      body #mainpage .container section .content2 .wrapper .About-Content .card-content.div-slider .carousel-item ul li {
-                        background-color: inherit;
-                        border-color: rgba(0, 0, 0, 0.12); }
-                body #mainpage .container section .content2 .wrapper .About-Content .card-content .card-tabs .tabs {
-                  background-color: #FFC107; }
-                  body #mainpage .container section .content2 .wrapper .About-Content .card-content .card-tabs .tabs a {
-                    color: white; }
-                body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten {
-                  position: relative;
-                  top: 0;
-                  right: 0;
-                  overflow: hidden;
-                  width: auto;
-                  min-width: 60%;
-                  min-height: 100% !important;
-                  margin: 0 0 10px 0; }
-                  @media screen and (max-width: 649px) {
-                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten {
-                      margin-left: 0; } }
-                  body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard {
-                    width: 100%;
-                    height: 100% !important;
-                    margin: 0;
-                    box-shadow: none;
-                    display: block; }
-                    body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content {
-                      background-color: #303F9F; }
-                      body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul {
-                        float: left;
-                        width: 45%;
-                        margin-right: 5px; }
-                        body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul .progressBar {
-                          width: 100%; }
-                        body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul .progress {
-                          background-color: grey; }
-                          body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul .progress .determinate {
-                            background-color: white; }
-            body #mainpage .container section .content2 .wrapper .Files-Content {
-              height: auto;
-              width: auto;
-              overflow-y: auto;
-              padding: 5px;
-              color: white;
-              display: block; }
-              body #mainpage .container section .content2 .wrapper .Files-Content .secure-form {
-                display: block; }
-                body #mainpage .container section .content2 .wrapper .Files-Content .secure-form #pw-input {
-                  float: left;
-                  width: 50% !important; }
-              body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files {
-                display: none; }
-                body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid {
-                  display: block;
-                  height: auto;
-                  max-height: 50% !important; }
-                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
-                    max-height: 50%;
-                    float: left;
-                    max-width: 30% !important; }
-                    @media screen and (max-width: 649px) {
-                      body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
-                        float: none; } }
-                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col .card .card-image img {
-                      filter: brightness(0.5); }
-  body #bg {
-    z-index: -1;
-    height: auto;
-    max-height: 1000px;
-    overflow-y: scroll; }
-    body #bg .layer2 {
-      position: fixed;
-      top: 0;
-      left: 0;
-      display: block;
-      height: 100%;
-      width: 100%;
-      background-image: url("../img/bg1.jpg");
-      background-repeat: no-repeat;
-      filter: blur(4px) brightness(100%);
-      transform: scale(1.1); }
-      @media screen and (orientation: portrait) {
-        body #bg .layer2 {
-          background-size: auto 100%; } }
-      @media screen and (orientation: landscape) {
-        body #bg .layer2 {
-          background-size: 100% auto; } }
-  body ::-webkit-scrollbar {
-    width: 0;
-    background: transparent; }
-  body .unselectable {
-    -webkit-user-select: none;
-    /* Chrome all / Safari all */
-    -moz-user-select: none;
-    /* Firefox all */
-    -ms-user-select: none;
-    /* IE 10+ */
-    user-select: none;
-    /* Likely future */ }
+/*
+Error: wrong number of arguments (given 4, expected 1..3) for `rgb'
+        on line 13 of main.scss
 
-/*# sourceMappingURL=main.css.map */
+8:   padding:0;
+9:   height: 100%;
+10:   width:100%;
+11:   z-index: 1;
+12:   overflow-x:hidden;
+13:   background-color: rgb(0,0,0,0.9);
+14:   .sidenav-overlay{
+15:     z-index: 2 !important;
+16:   }
+17:   #start{
+18:     z-index:5;
+
+Backtrace:
+main.scss:13
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/script/tree/funcall.rb:311:in `reformat_argument_error'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/script/tree/funcall.rb:158:in `rescue in _perform'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/script/tree/funcall.rb:127:in `_perform'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/script/tree/node.rb:50:in `perform'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:398:in `visit_prop'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block (2 levels) in visit_rule'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:440:in `block in visit_rule'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:438:in `visit_rule'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/sass_scss.rb:338:in `watch_or_update'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/base.rb:50:in `parse'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/lib/sass/exec/base.rb:18:in `parse!'
+C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/sass-3.5.7/bin/scss:13:in `<top (required)>'
+C:/Ruby25-x64/bin/scss:23:in `load'
+C:/Ruby25-x64/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: wrong number of arguments (given 4, expected 1..3) for `rgb'\A         on line 13 of main.scss\A \A 8:   padding:0;\A 9:   height: 100%;\A 10:   width:100%;\A 11:   z-index: 1;\A 12:   overflow-x:hidden;\A 13:   background-color: rgb(0,0,0,0.9);\A 14:   .sidenav-overlay{\A 15:     z-index: 2 !important;\A 16:   }\A 17:   #start{\A 18:     z-index:5;"; }
