@@ -24,6 +24,9 @@
 
         $result->close();
         if ($action == $key) {
+            session_start();
+            $_SESSION['verified'] = "yes";
+            $_SESSION['LAST_ACTIVITY'] = time();
             return true;
         }
         return false;
