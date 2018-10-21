@@ -431,13 +431,18 @@ body{
                 display: block;
                 height: auto;
                 max-height: 50% !important;
+
+
                 .row{
+                  overflow-y: auto;
                   .col{
                     max-height: 50%;
                     float:left;
-                    max-width:30% !important;
+                    max-width:30%;
                     @media screen and (max-width:649px){
                       float: none;
+                      margin:0 auto;
+                      max-width: 100%;
                     }
                     .card{
                       .card-image{
