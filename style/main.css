@@ -344,24 +344,23 @@ body {
                   float: left;
                   width: 50% !important; }
               body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files {
-                display: none; }
+                display: none;
+                overflow-y: auto; }
                 body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid {
                   display: block;
                   height: auto;
                   max-height: 50% !important; }
-                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row {
-                    overflow-y: auto; }
-                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
-                      max-height: 50%;
-                      float: left;
-                      max-width: 30%; }
-                      @media screen and (max-width: 649px) {
-                        body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
-                          float: none;
-                          margin: 0 auto;
-                          max-width: 100%; } }
-                      body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col .card .card-image img {
-                        filter: brightness(0.5); }
+                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
+                    max-height: 50%;
+                    float: left;
+                    max-width: 30%; }
+                    @media screen and (max-width: 649px) {
+                      body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
+                        float: none;
+                        margin: 0 auto;
+                        max-width: 100%; } }
+                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col .card .card-image img {
+                      filter: brightness(0.5); }
   body #bg {
     z-index: -1;
     height: auto;

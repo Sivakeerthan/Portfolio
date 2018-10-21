@@ -427,6 +427,7 @@ body{
             }
             .hidden-files{
               display:none;
+              overflow-y: auto;
               .card-grid{
                 display: block;
                 height: auto;
@@ -434,7 +435,7 @@ body{
 
 
                 .row{
-                  overflow-y: auto;
+
                   .col{
                     max-height: 50%;
                     float:left;
