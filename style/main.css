@@ -4,7 +4,8 @@ body {
   height: 100%;
   width: 100%;
   z-index: 1;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background-color: rgba(0, 0, 0, 0.9); }
   body .sidenav-overlay {
     z-index: 2 !important; }
   body #start {
@@ -246,7 +247,6 @@ body {
             color: white;
             background-color: #3F51B5; }
             body #mainpage .container section .content2 .wrapper .previewText {
-              float: left;
               width: auto;
               height: auto;
               display: block;
@@ -332,32 +332,40 @@ body {
                           body #mainpage .container section .content2 .wrapper .About-Content .card-content.faehigkeiten .faehigkeiten-subcard .card-content ul .progress .determinate {
                             background-color: white; }
             body #mainpage .container section .content2 .wrapper .Files-Content {
-              height: auto;
-              width: auto;
+              max-height: 80% !important;
+              width: 100%;
               overflow-y: auto;
               padding: 5px;
-              color: white;
-              display: block; }
+              color: white; }
               body #mainpage .container section .content2 .wrapper .Files-Content .secure-form {
                 display: block; }
                 body #mainpage .container section .content2 .wrapper .Files-Content .secure-form #pw-input {
                   float: left;
                   width: 50% !important; }
               body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files {
-                display: none; }
+                display: none;
+                height: auto;
+                max-height: 100%; }
                 body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid {
                   display: block;
                   height: auto;
-                  max-height: 50% !important; }
-                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
-                    max-height: 50%;
-                    float: left;
-                    max-width: 30% !important; }
-                    @media screen and (max-width: 649px) {
-                      body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
-                        float: none; } }
-                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col .card .card-image img {
-                      filter: brightness(0.5); }
+                  max-height: 50%; }
+                  @media screen and (max-width: 649px) {
+                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid {
+                      max-height: 100%; } }
+                  body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row {
+                    height: auto; }
+                    body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
+                      max-height: 50%;
+                      float: left;
+                      max-width: 30%; }
+                      @media screen and (max-width: 649px) {
+                        body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col {
+                          float: none;
+                          margin: 0 auto;
+                          max-width: 100%; } }
+                      body #mainpage .container section .content2 .wrapper .Files-Content .hidden-files .card-grid .row .col .card .card-image img {
+                        filter: brightness(0.5); }
   body #bg {
     z-index: -1;
     height: auto;

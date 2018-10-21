@@ -10,6 +10,7 @@ body{
   width:100%;
   z-index: 1;
   overflow-x:hidden;
+  background-color: rgba(0,0,0,0.9);
   .sidenav-overlay{
     z-index: 2 !important;
   }
@@ -300,7 +301,6 @@ body{
           color: white;
           background-color: $primary-color;
           .previewText {
-            float: left;
             width: auto;
             height: auto;
             display: block;
@@ -412,12 +412,11 @@ body{
             }
           }
           .Files-Content{
-            height:auto;
-            width:auto;
+            max-height:80% !important;
+            width:100%;
             overflow-y:auto;
             padding:5px;
             color:white;
-            display:block;
             .secure-form{
               display: block;
               #pw-input{
@@ -427,17 +426,27 @@ body{
             }
             .hidden-files{
               display:none;
+              height: auto;
+              max-height: 100%;
+
               .card-grid{
                 display: block;
                 height: auto;
-                max-height: 50% !important;
+                max-height: 50%;
+                @media screen and (max-width:649px){
+                  max-height:100%;
+                }
+
                 .row{
+                    height:auto;
                   .col{
                     max-height: 50%;
                     float:left;
-                    max-width:30% !important;
+                    max-width:30%;
                     @media screen and (max-width:649px){
                       float: none;
+                      margin:0 auto;
+                      max-width: 100%;
                     }
                     .card{
                       .card-image{
