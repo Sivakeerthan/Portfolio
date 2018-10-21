@@ -3,6 +3,7 @@ templates/home.vue
 script/vue.js
 package.json
 package-lock.json
-/.idea
+/.idea/
 /.idea/workspace.xml
 /vendor/
+/files/
