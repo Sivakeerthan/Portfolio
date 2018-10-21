@@ -122,9 +122,10 @@ function validatePW() {
     $.ajax({ url: '../php/main.php',
         data: {action: $("#pw-input").val() },
         type: 'post',
+        dataType: 'json',
         success: function(output) {
-            var corr = output;
-            if(corr){
+            console.log("output ="+output);
+            if(output === true){
                 M.toast({html: "Zugriff erfolgreich!"});
                 $(".secure-form").css("display","none")
                 $(".hidden-files").css("display","block");

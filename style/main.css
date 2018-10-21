@@ -247,7 +247,6 @@ body {
             color: white;
             background-color: #3F51B5; }
             body #mainpage .container section .content2 .wrapper .previewText {
-              float: left;
               width: auto;
               height: auto;
               display: block;
