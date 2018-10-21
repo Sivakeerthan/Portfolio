@@ -412,12 +412,11 @@ body{
             }
           }
           .Files-Content{
-            height:auto;
-            width:auto;
+            max-height:80% !important;
+            width:100%;
             overflow-y:auto;
             padding:5px;
             color:white;
-            display:block;
             .secure-form{
               display: block;
               #pw-input{
@@ -427,15 +426,19 @@ body{
             }
             .hidden-files{
               display:none;
-              overflow-y: auto;
+              height: auto;
+              max-height: 100%;
+
               .card-grid{
                 display: block;
                 height: auto;
-                max-height: 50% !important;
-
+                max-height: 50%;
+                @media screen and (max-width:649px){
+                  max-height:100%;
+                }
 
                 .row{
-
+                    height:auto;
                   .col{
                     max-height: 50%;
                     float:left;
