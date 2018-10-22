@@ -219,7 +219,7 @@ body{
             }
           }
           .contactInfo {
-            overflow: scroll;
+            overflow: auto;
             margin-top: 10px;
             height: 100%;
             max-width: 30%;
@@ -232,20 +232,25 @@ body{
               height: 50%;
               .col {
                 display: block;
-                width: 30%;
-                height: 100%;
+                width: auto;
+                max-width: 30%;
+                height: 30%;
                 float: left;
                 margin: 0;
                 padding: 1px;
+                @media only screen and (max-width: 949px) {
+                  max-width: 15%;
+                }
                 a {
                   max-width: 100%;
                   height: 100%;
                   img {
-                    width: 100%;
-                    height: auto;
+                    width: auto;
+                    height: 100%;
 
                   }
                 }
+
               }
             }
 
@@ -347,7 +352,7 @@ body{
                 margin:0;
                 float: left;
                 min-height:100%!important;
-                @media screen and (max-width:649px){
+                @media screen and (max-width:449px){
                   float: none;
                 }
                 .carousel-item{
@@ -385,7 +390,7 @@ body{
                 min-width: 60% ;
                 min-height:100% !important;
                 margin:0 0 10px 0;
-                @media screen and (max-width:649px){
+                @media screen and (max-width:449px){
                   margin-left:0 ;
                 }
                 .faehigkeiten-subcard {

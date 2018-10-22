@@ -113,11 +113,21 @@ $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true,
 });
-$('#carousel-back').click(function () {
+function prevItem () {
     M.Carousel.init('.carousel.carousel-slider').prev();
-});
-$('#carousel-next').click(function () {
+}
+function nextItem () {
     M.Carousel.init('.carousel.carousel-slider').next();
+}
+$(document).keydown(function(e){
+    switch(e.which){
+        case 37: prevItem();
+        break;
+        case 39: nextItem();
+        break;
+        default: return;
+    }
+    e.preventDefault();
 });
 });
 
