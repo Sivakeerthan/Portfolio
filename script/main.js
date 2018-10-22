@@ -113,6 +113,12 @@ $('.carousel.carousel-slider').carousel({
     fullWidth: true,
     indicators: true,
 });
+$('#carousel-back').click(function () {
+    M.Carousel.init('.carousel.carousel-slider').prev();
+});
+$('#carousel-next').click(function () {
+    M.Carousel.init('.carousel.carousel-slider').next();
+});
 });
 
 
