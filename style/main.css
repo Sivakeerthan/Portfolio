@@ -34,6 +34,11 @@ body {
         right: 0;
         margin: 0 auto;
         display: inline-block; }
+        @media screen and (max-width: 649px) {
+          body #start .logodiv img {
+            width: 130% !important;
+            height: auto !important;
+            right: -20%; } }
       body #start .logodiv .tooltiptext {
         width: 120px;
         background-color: #FFC107;
